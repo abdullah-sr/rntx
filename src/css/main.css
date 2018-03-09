@@ -145,9 +145,10 @@ body {
 
 h1 {
     font-family: Overpass, sans-serif;
-    font-size: 120px;
+    font-size: 8rem;
     color: #FFFFFF;
     letter-spacing: 9.23px;
+    margin: 0;
 }
 
 .subheader {
@@ -595,4 +596,35 @@ a {
 .home-section{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.home-section .left-col{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-section .title-container{
+    max-width: 350px;
+    margin: 0 auto;
+}
+.home-section .title-container .content{
+    font-size: 0.9rem;
+}
+
+.home-section .title-container .hl {
+    border-top: solid 1px #fff;
+    margin-top: -20px;
+    margin-bottom: 12px;
+    width: 30%;
+}
+
+.home-section .ball-container{
+    flex: 1;
+    text-align: center;
+}
+

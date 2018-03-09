@@ -13,7 +13,7 @@ function init() {
 
     root.renderer.setClearColor(0x1a1a1a); // background color
     root.renderer.setPixelRatio(window.devicePixelRatio || 1);
-    root.camera.position.set(0, 0, 600);
+    root.camera.position.set(0, 0, 400); // the closer the camera, the bigger the animation
 
     var textAnimation = createTextAnimation();
     root.scene.add(textAnimation);
@@ -23,7 +23,7 @@ function init() {
     root.scene.add(light);
 
     var tl = new TimelineMax({
-        repeat: -1,
+        repeat: 1,
         repeatDelay: 0.5,
         yoyo: true
     });
@@ -178,7 +178,7 @@ function TextAnimation(textGeometry) {
         },
         {
             diffuse: 0x444444,
-            specular: 0xcccccc,
+            specular: 0xffffff, // font color
             shininess: 4
             //emissive:0xffffff
         }
@@ -215,7 +215,7 @@ function THREERoot(params) {
         antialias: params.antialias
     });
     this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
-    document.getElementById('three-container').appendChild(this.renderer.domElement);
+    document.getElementById('ball-container').appendChild(this.renderer.domElement);
 
     this.camera = new THREE.PerspectiveCamera(
         params.fov,
@@ -255,7 +255,7 @@ THREERoot.prototype = {
         this.camera.aspect = window.innerWidth / window.innerHeight;
         this.camera.updateProjectionMatrix();
 
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setSize(window.innerWidth/2, window.innerHeight/2); // canvas size
     }
 };
 
