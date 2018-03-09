@@ -64,6 +64,7 @@ const config = {
             template: `${APP_DIR}/index.html`,
             filename: `${BUILD_DIR}/index.html`,
             hash: true,
+            inject: 'head',
         }),
 
         new ExtractTextPlugin({
@@ -73,6 +74,9 @@ const config = {
             NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
         }),
         new CleanWebpackPlugin([BUILD_DIR]),
+        new webpack.ProvidePlugin({
+            THREE: `${APP_DIR}/js/three`,
+        }),
         // new BundleAnalyzerPlugin(),
     ],
 };

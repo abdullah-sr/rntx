@@ -4,9 +4,17 @@ import Vivus from 'vivus';
 import $ from 'jquery';
 import 'fullpage.js';
 import '../css/main.css';
+import initBall from './ball_animation';
 
 
 $(document).ready(() => {
+    $('#fullpage').fullpage({
+        verticalCentered: false,
+    });
+
+    const xshape = document.getElementById('xshape');
+    xshape.classList.add('visible');
+
     const myVivus = new Vivus('pathx');
     myVivus.play(1, () => {
         myVivus.reset();
@@ -14,7 +22,5 @@ $(document).ready(() => {
         xtext.classList.add('visible');
     });
 
-    $('#fullpage').fullpage({
-        verticalCentered: false,
-    });
+    initBall();
 });
