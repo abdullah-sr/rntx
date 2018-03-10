@@ -11,7 +11,7 @@ const APP_DIR = path.resolve(__dirname, './src');
 
 const config = {
     cache: true,
-    entry: `${APP_DIR}/js/main.js`,
+    entry: ['babel-polyfill', `${APP_DIR}/js/main.js`],
     output: {
         path: BUILD_DIR,
         filename: 'js/app.js',
@@ -24,16 +24,16 @@ const config = {
                 use: 'babel-loader',
             },
             {
+                test: /\.html$/,
+                use: 'html-loader',
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: { loader: 'style-loader' },
                     use: { loader: 'css-loader' },
                     publicPath: '/../',
                 }),
-            },
-            {
-                test: /\.html$/,
-                use: 'html-loader?attrs=img:src img:data-src',
             },
             {
                 test: /\.(png|jpg|gif)$/,

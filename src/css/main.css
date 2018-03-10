@@ -611,9 +611,10 @@ a {
 }
 
 .nav > a {
-    /*padding: 10px;*/
-    margin-right: 18px;
-}
+     /*padding: 10px;*/
+     margin-right: 18px;
+     opacity: 0;
+ }
 
 .home-section {
     display: flex;
@@ -673,10 +674,13 @@ a {
 .project-section .reasons{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .project-section .reason{
    margin-right: 40px;
+    margin-bottom: 40px;
+    max-width: 290px;
 }
 
 .project-section .reason:last-of-type{
