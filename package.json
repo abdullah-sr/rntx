@@ -63,6 +63,7 @@
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
     "typeface-overpass": "0.0.54",
+    "typeface-overpass-mono": "0.0.54",
     "vivus": "^0.4.3"
   }
 }

@@ -1,6 +1,7 @@
 // css
 import 'normalize.css';
 import 'typeface-overpass';
+import 'typeface-overpass-mono';
 import 'animate.css';
 import '../css/main.css';
 // js

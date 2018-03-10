@@ -213,6 +213,7 @@ button.telegram.light:hover {
 
 h2 {
     font-family: Overpass, sans-serif;
+    font-weight: 400;
     font-size: 3.2rem;
     letter-spacing: -1.7px;
     line-height: 60px;
@@ -227,7 +228,8 @@ h3 {
 }
 
 h4 {
-    font-family: Overpass, sans-serif;
+    font-family: Overpass Mono, sans-serif;
+    font-weight: 400;
     font-size: 12px;
     letter-spacing: 0;
 }
@@ -266,10 +268,13 @@ h6 {
     letter-spacing: 0.77pt;
 }
 
-.papers .contribute {
+.paper-section .contribute {
     font-family: Overpass, sans-serif;
     font-size: 18px;
     letter-spacing: 1.33px;
+    margin: 75px auto 20px;
+    text-align: center;
+    max-width: 400px;
 }
 
 .core {
@@ -302,13 +307,13 @@ h6 {
 }
 
 .core .usecases {
-    font-family: Overpass, sans-serif;
+    font-family: Overpass Mono, sans-serif;
     font-size: 15px;
     letter-spacing: 1.1px;
 }
 
 .core .usecases .read {
-    font-family: Overpass, sans-serif;
+    font-family: Overpass Mono, sans-serif;
     font-size: 15px;
     letter-spacing: 1.5px;
 }
@@ -328,7 +333,7 @@ h6 {
 }
 
 .team .position {
-    font-family: Overpass, sans-serif;
+    font-family: Overpass Mono, sans-serif;
     font-size: 11px;
     letter-spacing: 0;
 }
@@ -559,7 +564,7 @@ a {
     align-self: center;
 }
 
-.flex-rw{
+.flex-rw {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -579,6 +584,7 @@ a {
     position: relative;
     background-color: #1a1a1a;
     color: #fff;
+    padding-top: 80px;
 }
 
 .section.inverted {
@@ -617,10 +623,10 @@ a {
 }
 
 .nav > a {
-     /*padding: 10px;*/
-     margin-right: 18px;
-     opacity: 0;
- }
+    /*padding: 10px;*/
+    margin-right: 18px;
+    opacity: 0;
+}
 
 .home-section {
     display: flex;
@@ -669,23 +675,21 @@ a {
     padding: 15px;
 }
 
-.project-section h5{
+.project-section h5 {
     margin-bottom: 50px;
 }
 
-
-
-.project-section .reason{
-   margin-right: 40px;
+.project-section .reason {
+    margin-right: 40px;
     margin-bottom: 40px;
     max-width: 290px;
 }
 
-.project-section .reason:last-of-type{
-   margin-right: 0;
+.project-section .reason:last-of-type {
+    margin-right: 0;
 }
 
-.project-section .numbers{
+.project-section .numbers {
     margin-bottom: 40px;
 }
 
@@ -698,3 +702,17 @@ a {
     padding: 15px;
 }
 
+.paper-section .paper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 280px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.paper-section .paper .title {
+    padding-bottom: 30px;
+    border-bottom: solid 1px #fff;
+    margin-bottom: 15px;
+}
