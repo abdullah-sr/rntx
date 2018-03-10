@@ -61,7 +61,7 @@ const config = {
     },
     plugins: [
         new HTMLPlugin({
-            template: `${APP_DIR}/index.html`,
+            template: `${APP_DIR}/index.html.ejs`,
             filename: `${BUILD_DIR}/index.html`,
             hash: true,
             inject: 'head',

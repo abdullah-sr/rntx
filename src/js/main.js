@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import 'typeface-overpass';
 import 'normalize.css';
 import Vivus from 'vivus';
@@ -8,19 +9,22 @@ import initBall from './ball_animation';
 
 
 $(document).ready(() => {
-    $('#fullpage').fullpage({
-        verticalCentered: false,
-    });
-
-    const xshape = document.getElementById('xshape');
-    xshape.classList.add('visible');
 
     const myVivus = new Vivus('pathx');
-    myVivus.play(1, () => {
+    myVivus.play(5, async () => {
         myVivus.reset();
         const xtext = document.getElementById('xtext');
         xtext.classList.add('visible');
+        await sleep(1000);
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+        });
+        initBall();
+        $('#loading').fadeOut(700);
     });
-
-    initBall();
 });
+
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

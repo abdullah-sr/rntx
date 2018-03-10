@@ -104,9 +104,10 @@ body {
     background-color: #fff;
 }
 
+/* override */
 .dark {
-    color: #fff;
-    border-color: #fff;
+    color: inherit;
+    /*border-color: #fff;*/
 }
 
 .light {
@@ -212,7 +213,7 @@ button.telegram.light:hover {
 
 h2 {
     font-family: Overpass, sans-serif;
-    font-size: 58px;
+    font-size: 3.2rem;
     letter-spacing: -1.7px;
     line-height: 60px;
 }
@@ -244,11 +245,13 @@ h6 {
 }
 
 .numbers {
-    width: 15px;
+    width: 0;
     transform: rotate(-90deg);
     font-family: Overpass, sans-serif;
     font-size: 12px;
     letter-spacing: 0;
+    border-left: 1px solid #000;
+    padding-left: 8px;
 }
 
 .papers {
@@ -535,10 +538,9 @@ html {
 }
 
 body {
+    position: relative;
     height: 100%;
     font-family: Overpass, sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
 }
 
 a {
@@ -557,12 +559,32 @@ a {
     align-self: center;
 }
 
+.loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #1a1a1a;
+}
+
+.section {
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.section.inverted {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
 .xshape {
     position: relative;
     height: 50%;
     text-align: center;
     margin: auto 20px;
-    opacity: 0;
 }
 
 .xshape svg {
@@ -581,7 +603,7 @@ a {
 .nav {
     display: flex;
     text-transform: uppercase;
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 10px;
     font-size: 13px;
@@ -589,30 +611,33 @@ a {
 }
 
 .nav > a {
-    padding: 10px;
+    /*padding: 10px;*/
     margin-right: 18px;
 }
 
-.home-section{
+.home-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+
 }
 
-.home-section .left-col{
+.home-section .left-col {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 15px;
 }
 
-.home-section .title-container{
+.home-section .title-container {
     max-width: 350px;
     margin: 0 auto;
 }
-.home-section .title-container .content{
+
+.home-section .title-container .content {
     font-size: 0.9rem;
 }
 
@@ -623,8 +648,41 @@ a {
     width: 30%;
 }
 
-.home-section .ball-container{
+.home-section .ball-container {
     flex: 1;
     text-align: center;
 }
 
+.project-section {
+    margin-top: -100px;
+    padding: 15px;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -100px auto 0 auto;
+    max-width: 1000px;
+}
+
+.project-section h5{
+    margin-bottom: 50px;
+}
+
+.project-section .reasons{
+    display: flex;
+    flex-direction: row;
+}
+
+.project-section .reason{
+   margin-right: 40px;
+}
+
+.project-section .reason:last-of-type{
+   margin-right: 0;
+}
+
+.project-section .numbers{
+    margin-bottom: 40px;
+}

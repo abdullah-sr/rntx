@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>RNTX</title>
+
+</head>
+
+<body>
+<div id="loading" class="loading center-vertically">
+    <div id="xshape" class="xshape">
+        <svg width="100%" height="100%" viewBox="0 0 342 413" version="1.1" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink" id="pathx">
+            <polygon id="xpath" stroke="black" stroke-width="5" fill="none"
+                     points="260.179002 412.048193 171.29432 266.065404 81.8209983 412.048193 0 412.048193 130.089501 198.960413 8.82960413 0 90.6506024 0 171.29432 132.444062 251.938038 0 333.759036 0 211.910499 198.960413 342 412.048193"></polygon>
+        </svg>
+        <img id="xtext" src="<%= require('./images/xtext.png') %>"/>
+
+    </div>
+</div>
+<div id="fullpage">
+    <div class="section home-section">
+        <%= require('./navigation.html') %>
+        <div class="left-col">
+            <div class="title-container">
+                <h1>RNTX</h1>
+                <div class="hl"></div>
+                <div class="content">
+                    CONNECTING RENTERS & LANDLORDS IN A TRANSPARENT, DECENTRALIZED WORLD
+                </div>
+            </div>
+        </div>
+
+        <div id="ball-container" class="ball-container"></div>
+    </div>
+    <div class="section inverted center-vertically">
+        <%= require('./navigation.html') %>
+        <div class="project-section">
+            <div class="content">
+                <h4>LEVERAGING THE BLOCKCHAIN TO REDEFINE RENTER-LANDLORD INTERACTIONS</h4>
+                <h2>A global, transparent, and decentralized rental ecosystem</h2>
+                <h5>…catalyzing social change and presenting solutions to the following problems:</h5>
+                <div class="reasons">
+                    <div class="reason">
+                        <div class="numbers">01</div>
+                        Dependence on credit scores that fail to provide transparency + information truly reflective of the quality and solvency of renters</div>
+                    <div class="reason">
+                        <div class="numbers">02</div> Insufficiencies in centralized operational structures used throughout the rental process</div>
+                    <div class="reason">
+                        <div class="numbers">03</div>Lack of incentivization, reusability, and deep fragmentation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
