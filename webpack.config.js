@@ -33,29 +33,26 @@ const config = {
             },
             {
                 test: /\.html$/,
-                use: 'html-loader',
+                use: 'html-loader?attrs=img:src img:data-src',
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            outputPath: './images/',
-                        },
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: './images/',
                     },
-                ],
+                },
+
             },
             {
                 test: /\.(woff|woff2|eot|ttf|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            outputPath: './fonts/',
-                        },
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: './fonts/',
                     },
-                ],
+                },
             },
         ],
     },

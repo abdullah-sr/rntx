@@ -11,7 +11,7 @@ import initBall from './ball_animation';
 $(document).ready(() => {
 
     const myVivus = new Vivus('pathx');
-    myVivus.play(1, async () => {
+    myVivus.play(10, async () => {
         myVivus.reset();
         const xtext = document.getElementById('xtext');
         xtext.classList.add('visible');
