@@ -20,7 +20,7 @@ html {
  * https://twitter.com/miketaylr/status/12228805301
  *
  * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
+ * https://stackoverflow.com/a/16982510/713347ty1
  *
  * Customize the background color to match your design.
  */
@@ -535,7 +535,6 @@ h6 {
 
 html {
     box-sizing: border-box;
-    height: 100%;
 }
 
 *, *:before, *:after {
@@ -544,8 +543,20 @@ html {
 
 body {
     position: relative;
-    height: 100%;
+
+    overflow: hidden;
+}
+
+html, body {
     font-family: Overpass, sans-serif;
+    height: 100%;
+    font-size: 16px;
+}
+
+@media (max-width: 800px) {
+    html, body {
+        font-size: 14px;
+    }
 }
 
 a {
@@ -568,6 +579,7 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .loading {
@@ -685,7 +697,7 @@ a {
     max-width: 290px;
 }
 
-.project-section .reason:last-of-type {
+.project-section .reason:last-child {
     margin-right: 0;
 }
 
@@ -749,4 +761,62 @@ a {
     padding-bottom: 30px;
     border-bottom: solid 1px #fff;
     margin-bottom: 15px;
+}
+
+.core-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -100px auto 0 auto;
+    max-width: 1000px;
+    padding: 15px;
+}
+
+.core-section h4{
+    max-width: 120px;
+    text-align: center;
+}
+
+.component-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -100px auto 0 auto;
+    max-width: 1200px;
+    padding: 15px;
+}
+
+.component-section .title{
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+}
+
+.component-section .item {
+    flex: 1;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}
+
+.component-section .item img,
+.component-section .item svg{
+    width: 100%;
+}
+
+.component-section .item:last-child {
+    margin-right: 0;
+}
+
+.component-section .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.component-section .list div{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #fff;
 }

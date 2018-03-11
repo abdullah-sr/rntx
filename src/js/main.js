@@ -14,18 +14,23 @@ import initBall from './ball_animation';
 $(document).ready(() => {
 
     const myVivus = new Vivus('pathx');
+    // start loading X animation
     myVivus.play(10, async () => {
         myVivus.reset();
         const xtext = document.getElementById('xtext');
+        // show X text
         xtext.classList.add('visible');
         await sleep(1000);
+        $('#loading').fadeOut(700);
         $('#fullpage').fullpage({
             verticalCentered: false,
             onLeave: animateNav,
         });
         initBall();
-        $('#loading').fadeOut(700);
+        animateNav();
     });
+
+
 });
 
 
