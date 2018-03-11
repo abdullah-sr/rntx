@@ -39,7 +39,7 @@ function init() {
 
 function createTextAnimation() {
     var geometry = generateTextGeometry('X', {
-        size: 120,
+        size: 180,
         height: 12,
         font: 'droid sans',
         weight: 'bold',
@@ -255,7 +255,7 @@ THREERoot.prototype = {
         this.camera.aspect = window.innerWidth / window.innerHeight;
         this.camera.updateProjectionMatrix();
 
-        this.renderer.setSize(window.innerWidth/2, window.innerHeight/2); // canvas size
+        this.renderer.setSize(window.innerWidth/1.75, window.innerHeight/1.75); // canvas size
     }
 };
 

@@ -119,7 +119,7 @@ body {
     font-family: Overpass, sans-serif;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 0.8rem;
     line-height: 20px;
     text-align: center;
     display: block;
@@ -553,12 +553,6 @@ html, body {
     font-size: 16px;
 }
 
-@media (max-width: 800px) {
-    html, body {
-        font-size: 14px;
-    }
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -697,9 +691,6 @@ a {
     max-width: 290px;
 }
 
-.project-section .reason:last-child {
-    margin-right: 0;
-}
 
 .project-section .numbers {
     margin-bottom: 40px;
@@ -716,6 +707,11 @@ a {
 
 .press-section h2 {
     margin-bottom: 100px;
+}
+
+.press-section .grid {
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 .press-section .grid-item {
@@ -772,12 +768,12 @@ a {
     padding: 15px;
 }
 
-.core-section h4{
+.core-section h4 {
     max-width: 120px;
     text-align: center;
 }
 
-.component-section{
+.component-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -786,21 +782,21 @@ a {
     padding: 15px;
 }
 
-.component-section .title{
+.component-section .title {
     display: flex;
     align-items: center;
     font-size: 1.75rem;
 }
 
 .component-section .item {
-    flex: 1;
     margin-right: 60px;
     margin-bottom: 20px;
 }
 
 .component-section .item img,
-.component-section .item svg{
+.component-section .item svg {
     width: 100%;
+    max-width: 300px;
 }
 
 .component-section .item:last-child {
@@ -815,8 +811,41 @@ a {
     font-size: 1rem;
 }
 
-.component-section .list div{
+.component-section .list div {
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: solid 1px #fff;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    .section {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 380px) {
+    .nav > a {
+        margin-right: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .press-section h2 {
+        margin-bottom: 40px;
+    }
+    .press-section .grid-item{
+        height: 100px;
+        width: 100px;
+    }
+
+    .project-section .reason {
+        margin-bottom: 15px;
+    }
 }

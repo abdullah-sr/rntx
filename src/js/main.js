@@ -15,7 +15,7 @@ $(document).ready(() => {
 
     const myVivus = new Vivus('pathx');
     // start loading X animation
-    myVivus.play(10, async () => {
+    myVivus.play(1, async () => {
         myVivus.reset();
         const xtext = document.getElementById('xtext');
         // show X text
