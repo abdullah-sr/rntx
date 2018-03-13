@@ -3,6 +3,7 @@ import 'normalize.css';
 import 'typeface-overpass';
 import 'typeface-overpass-mono';
 import 'animate.css';
+import '../css/decolines.css';
 import '../css/main.css';
 // js
 import Vivus from 'vivus';
@@ -12,36 +13,73 @@ import initBall from './ball_animation';
 
 
 $(document).ready(() => {
-
+    require('./LineMaker');
     const myVivus = new Vivus('pathx');
     // start loading X animation
     myVivus.play(1, async () => {
         myVivus.reset();
-        const xtext = document.getElementById('xtext');
-        // show X text
-        xtext.classList.add('visible');
-        await sleep(1000);
-        $('#loading').fadeOut(700);
-        $('#fullpage').fullpage({
-            verticalCentered: false,
-            onLeave: animateNav,
+        $('#xtext').fadeIn(1000, () => {
+            // fade out of loading screen
+            $('#loading').fadeOut(700);
+            $('#fullpage').fullpage({
+                verticalCentered: false,
+                onLeave: animateNav,
+            });
+            initBall();
+            animateNav();
+            lineMaker.animateLinesIn();
         });
-        initBall();
-        animateNav();
     });
-
-
+    var lineMaker = new LineMaker({
+        parent: { element: document.getElementById('test') },
+        lines: [
+            {
+                top: '-100%',
+                left: '15px',
+                width: 1,
+                height: '200vh',
+                color: '#c7c6c6',
+                hidden: true,
+                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
+            },
+            {
+                top: '-100%',
+                left: '335px',
+                width: 1,
+                height: '200vh',
+                color: '#c7c6c6',
+                hidden: true,
+                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
+            },
+            {
+                top: '-100%',
+                left: '655px',
+                width: 1,
+                height: '200vh',
+                color: '#c7c6c6',
+                hidden: true,
+                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
+            },
+            {
+                top: '-100%',
+                right: '15px',
+                width: 1,
+                height: '200vh',
+                color: '#c7c6c6',
+                hidden: true,
+                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
+            },
+        ]
+    });
 });
 
 
 async function animateNav() {
     const animation = 'fadeInDown';
     // hide nav on section leave
-    const $menuItem = $('.menuitem').removeClass(`visible animated ${animation}`);
+    const $menuItem = $('.menuitem').removeClass(`animated ${animation}`);
     await sleep(500);
-    $menuItem.animateCss(animation, (ele) => {
-        ele.addClass('visible');
-    });
+    $menuItem.animateCss(animation);
 }
 
 
@@ -68,7 +106,6 @@ $.fn.extend({
 
         this.addClass('animated ' + animationName).one(animationEnd, () => {
             if (typeof callback === 'function') callback(this);
-            $(this).removeClass('animated ' + animationName);
         });
 
         return this;

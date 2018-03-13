@@ -591,6 +591,7 @@ a {
     background-color: #1a1a1a;
     color: #fff;
     padding-top: 80px;
+    overflow: hidden;
 }
 
 .section.inverted {
@@ -612,8 +613,7 @@ a {
 }
 
 .xshape img {
-    opacity: 0;
-    transition: opacity 1s ease;
+    display: none;
     max-width: 100%;
     max-height: 100%;
 }
@@ -673,6 +673,7 @@ a {
 }
 
 .project-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -681,12 +682,17 @@ a {
     padding: 15px;
 }
 
+.project-section .content{
+    z-index: 10;
+}
+
 .project-section h5 {
     margin-bottom: 50px;
 }
 
 .project-section .reason {
-    margin-right: 40px;
+    font-size: 0.9rem;
+    margin-right: 30px;
     margin-bottom: 40px;
     max-width: 290px;
 }
