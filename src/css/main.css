@@ -703,12 +703,17 @@ a {
 }
 
 .press-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: -100px auto 0 auto;
     max-width: 1000px;
     padding: 15px;
+}
+
+.press-section .content{
+    z-index: 10;
 }
 
 .press-section h2 {
@@ -722,8 +727,8 @@ a {
 
 .press-section .grid-item {
     border: solid 1px #f2f2f2;
-    width: 150px;
-    height: 150px;
+    width: 162.5px;
+    height: 162.5px;
     display: flex;
     flex-direction: column;
     justify-content: center;

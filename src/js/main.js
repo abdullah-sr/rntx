@@ -14,62 +14,95 @@ import initBall from './ball_animation';
 
 $(document).ready(() => {
     require('./LineMaker');
+    const lineMakers = [
+        null, // no lines for first slide
+        new LineMaker({
+            parent: { element: document.getElementById('project-section') },
+            lines: [
+                {
+                    top: '-230px',
+                    left: '15px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+                {
+                    top: '-230px',
+                    left: '335px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+                {
+                    top: '-230px',
+                    left: '655px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+                {
+                    top: '-230px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('press-section') },
+            lines: [
+                {
+                    top: '-230px',
+                    left: '15px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+                {
+                    top: '-230px',
+                    left: '335px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+                {
+                    top: '-230px',
+                    left: '655px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+                {
+                    top: '-230px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '110vh',
+                    color: '#c7c6c6',
+                },
+            ]
+        })];
     const myVivus = new Vivus('pathx');
     // start loading X animation
-    myVivus.play(1, async () => {
+    myVivus.play(50, async () => {
         myVivus.reset();
         $('#xtext').fadeIn(1000, () => {
             // fade out of loading screen
             $('#loading').fadeOut(700);
             $('#fullpage').fullpage({
                 verticalCentered: false,
-                onLeave: animateNav,
+                onLeave: (index, nextIndex) => {
+                    animateNav();
+                    if (lineMakers[index - 1])
+                        lineMakers[index - 1].hideLines(index - 1);
+                    if (lineMakers[nextIndex - 1])
+                        lineMakers[nextIndex - 1].animateLinesIn(nextIndex - 1);
+                },
             });
             initBall();
             animateNav();
-            lineMaker.animateLinesIn();
         });
-    });
-    var lineMaker = new LineMaker({
-        parent: { element: document.getElementById('test') },
-        lines: [
-            {
-                top: '-100%',
-                left: '15px',
-                width: 1,
-                height: '200vh',
-                color: '#c7c6c6',
-                hidden: true,
-                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
-            },
-            {
-                top: '-100%',
-                left: '335px',
-                width: 1,
-                height: '200vh',
-                color: '#c7c6c6',
-                hidden: true,
-                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
-            },
-            {
-                top: '-100%',
-                left: '655px',
-                width: 1,
-                height: '200vh',
-                color: '#c7c6c6',
-                hidden: true,
-                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
-            },
-            {
-                top: '-100%',
-                right: '15px',
-                width: 1,
-                height: '200vh',
-                color: '#c7c6c6',
-                hidden: true,
-                animation: { duration: 2000, easing: 'easeInOutExpo', delay: 0, direction: 'TopBottom' }
-            },
-        ]
     });
 });
 

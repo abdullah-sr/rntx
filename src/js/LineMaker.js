@@ -45,11 +45,11 @@
 		left: '50%',
 		top: '0%',
 		color: '#000',
-		hidden: false,
+		hidden: true,
 		animation: {
-			duration: 500,
+			duration: 700,
 			easing: 'linear',
-			delay: 0,
+			delay: 300,
 			direction: 'TopBottom'
 		}
 	};
@@ -64,6 +64,7 @@
 		this.el.style.width = typeof opts.width === 'number' ? opts.width + 'px' : opts.width;
 		this.el.style.height = typeof opts.height === 'number' ? opts.height + 'px' : opts.height;
 		this.el.style.left = typeof opts.left === 'number' ? opts.left + 'px' : opts.left;
+		this.el.style.right = typeof opts.right === 'number' ? opts.right + 'px' : opts.right;
 		this.el.style.top = typeof opts.top === 'number' ? opts.top + 'px' : opts.top;
 		this.el.style.background = opts.color || opts.color;
 		this.el.style.opacity = opts.hidden ? 0 : 1;
