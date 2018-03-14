@@ -20,69 +20,267 @@ $(document).ready(() => {
             parent: { element: document.getElementById('project-section') },
             lines: [
                 {
-                    top: '-230px',
+                    top: '-500px',
                     left: '15px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
                 {
-                    top: '-230px',
+                    top: '-500px',
                     left: '335px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
                 {
-                    top: '-230px',
+                    top: '-500px',
                     left: '655px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
                 {
-                    top: '-230px',
+                    top: '-500px',
                     left: 'auto',
                     right: '15px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
             ]
         }), new LineMaker({
             parent: { element: document.getElementById('press-section') },
             lines: [
                 {
-                    top: '-230px',
+                    top: '-500px',
                     left: '15px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
                 {
-                    top: '-230px',
-                    left: '335px',
+                    top: '-500px',
+                    left: '338px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
                 {
-                    top: '-230px',
-                    left: '655px',
+                    top: '-500px',
+                    left: '661px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
                 {
-                    top: '-230px',
+                    top: '-500px',
                     left: 'auto',
                     right: '15px',
                     width: 1,
-                    height: '110vh',
-                    color: '#c7c6c6',
+                    height: '200vh',
+                    color: '#f2f2f2',
                 },
             ]
-        })];
+        }), new LineMaker({
+            parent: { element: document.getElementById('papers-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('core-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '-300px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '60px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '360px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '660px',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('renterid-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '422px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '829px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('renteriq-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '422px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '829px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('renterscore-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '422px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '829px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('token-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '422px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '829px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }),];
     const myVivus = new Vivus('pathx');
     // start loading X animation
     myVivus.play(50, async () => {

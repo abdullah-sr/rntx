@@ -262,13 +262,21 @@ h6 {
     letter-spacing: 1.15px;
 }
 
+.papers-section {
+    position: relative;
+}
+
+.papers-section .content{
+    z-index: 10;
+}
+
 .papers .descriptions {
     font-family: Overpass, sans-serif;
     font-size: 12px;
     letter-spacing: 0.77pt;
 }
 
-.paper-section .contribute {
+.papers-section .contribute {
     font-family: Overpass, sans-serif;
     font-size: 18px;
     letter-spacing: 1.33px;
@@ -543,8 +551,7 @@ html {
 
 body {
     position: relative;
-
-    overflow: hidden;
+    overflow: visible !important;
 }
 
 html, body {
@@ -574,6 +581,7 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .loading {
@@ -626,6 +634,7 @@ a {
     right: 10px;
     font-size: 13px;
     letter-spacing: 1.1px;
+    z-index: 10;
 }
 
 .nav > a {
@@ -720,11 +729,6 @@ a {
     margin-bottom: 100px;
 }
 
-.press-section .grid {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
 .press-section .grid-item {
     border: solid 1px #f2f2f2;
     width: 162.5px;
@@ -746,7 +750,7 @@ a {
     width: 100%;
 }
 
-.paper-section {
+.papers-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -755,7 +759,7 @@ a {
     padding: 15px;
 }
 
-.paper-section .paper {
+.papers-section .paper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -764,7 +768,7 @@ a {
     margin-right: 40px;
 }
 
-.paper-section .paper .title {
+.papers-section .paper .title {
     padding-bottom: 30px;
     border-bottom: solid 1px #fff;
     margin-bottom: 15px;
@@ -777,20 +781,36 @@ a {
     margin: -100px auto 0 auto;
     max-width: 1000px;
     padding: 15px;
+    position: relative;
+}
+
+.core-section .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
 }
 
 .core-section h4 {
     max-width: 120px;
     text-align: center;
+
 }
 
 .component-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: -100px auto 0 auto;
     max-width: 1200px;
     padding: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.component-section .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
 }
 
 .component-section .title {
@@ -800,6 +820,7 @@ a {
 }
 
 .component-section .item {
+    flex: 1;
     margin-right: 60px;
     margin-bottom: 20px;
 }

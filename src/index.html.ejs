@@ -119,8 +119,8 @@
     </div>
     <div class="section center-vertically">
         <%= require('./navigation.html') %>
-        <div class="paper-section">
-            <div class="">
+        <div id="papers-section" class="papers-section">
+            <div class="content">
                 <h4>DIVE DEEPER</h4>
                 <h2>Learn how RntX works</h2>
                 <div class="flex-rw papers">
@@ -151,70 +151,80 @@
     </div>
     <div class="section center-vertically">
         <%= require('./navigation.html') %>
-        <div class="core-section">
-            <h1>CORE</h1>
-            <h4>UNDERSTAND THE BASICS</h4>
+        <div id="core-section" class="core-section">
+            <div class="content">
+                <h1>CORE</h1>
+                <h4>UNDERSTAND THE BASICS</h4>
+            </div>
         </div>
     </div>
     <div class="section center-vertically">
         <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RenterID</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/fingerprint.svg') %>"></div>
-                <div class=" item title">Facilitates a global renter identity.</div>
-                <div class="item list">
-                    <div>Providing security, transparency and privacy</div>
-                    <div>Verified by your network and third-parties</div>
+        <div id="renterid-section" class="component-section">
+            <div class="content">
+                <h2>RenterID</h2>
+                <div class="flex-rw">
+                    <div class="item"><img src="<%= require('./images/fingerprint.svg') %>"></div>
+                    <div class=" item title">Facilitates a global renter identity.</div>
+                    <div class="item list">
+                        <div>Providing security, transparency and privacy</div>
+                        <div>Verified by your network and third-parties</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="section center-vertically">
         <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RenterIQ</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/brain.svg') %>"></div>
-                <div class=" item title">A store of renter behaviour.</div>
-                <div class="item list">
-                    <div>Tracks current and historical rental information</div>
-                    <div>Fuels the RenterScore</div>
+        <div id="renteriq-section" class="component-section">
+            <div class="content">
+                <h2>RenterIQ</h2>
+                <div class="flex-rw">
+                    <div class="item"><img src="<%= require('./images/brain.svg') %>"></div>
+                    <div class=" item title">A store of renter behaviour.</div>
+                    <div class="item list">
+                        <div>Tracks current and historical rental information</div>
+                        <div>Fuels the RenterScore</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="section center-vertically">
         <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RenterScore</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/vitals.svg') %>"></div>
-                <div class=" item title">A metric of renter trustworthiness.</div>
-                <div class="item list">
-                    <div>Determined by a dynamic algorithm fueled by RenterIQ.</div>
-                    <div>Open source, transparent, community-driven, universal, adaptable.</div>
+        <div id="renterscore-section" class="component-section">
+            <div class="content">
+                <h2>RenterScore</h2>
+                <div class="flex-rw">
+                    <div class="item"><img src="<%= require('./images/vitals.svg') %>"></div>
+                    <div class=" item title">A metric of renter trustworthiness.</div>
+                    <div class="item list">
+                        <div>Determined by a dynamic algorithm fueled by RenterIQ.</div>
+                        <div>Open source, transparent, community-driven, universal, adaptable.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="section center-vertically">
         <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RNTX Token</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/xtext.png') %>"></div>
-                <div class=" item title">The means to transact in and incentivize the ecosystem.</div>
-                <div class="item list">
-                    <div>The RntX ecosystem links the core protocol to a tokenized layer of utility.</div>
-                    <div>Guide the evolution of the ID, IQ, and RenterScore.</div>
-                    <div>
-                        + Peek into use cases<br>
-                        RENTAL APPLICATIONS
-                        INCENTIVIZATION
-                        SECURITY DEPOSITS
-                        ROOMMATE FINDING <br>
-                        READ THE WHITEPAPER
+        <div id="token-section" class="component-section">
+            <div class="content">
+                <h2>RNTX Token</h2>
+                <div class="flex-rw">
+                    <div class="item"><img src="<%= require('./images/xtext.png') %>"></div>
+                    <div class=" item title">The means to transact in and incentivize the ecosystem.</div>
+                    <div class="item list">
+                        <div>The RntX ecosystem links the core protocol to a tokenized layer of utility.</div>
+                        <div>Guide the evolution of the ID, IQ, and RenterScore.</div>
+                        <div>
+                            + Peek into use cases<br>
+                            RENTAL APPLICATIONS
+                            INCENTIVIZATION
+                            SECURITY DEPOSITS
+                            ROOMMATE FINDING <br>
+                            READ THE WHITEPAPER
+                        </div>
                     </div>
                 </div>
             </div>

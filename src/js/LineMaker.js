@@ -49,7 +49,7 @@
 		animation: {
 			duration: 700,
 			easing: 'linear',
-			delay: 300,
+			delay: 500,
 			direction: 'TopBottom'
 		}
 	};
