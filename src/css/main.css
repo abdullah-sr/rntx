@@ -98,6 +98,7 @@ textarea {
 
 body {
     background-color: #1a1a1a;
+    overflow: hidden;
 }
 
 .light-section {
@@ -266,7 +267,7 @@ h6 {
     position: relative;
 }
 
-.papers-section .content{
+.papers-section .content {
     z-index: 10;
 }
 
@@ -551,7 +552,7 @@ html {
 
 body {
     position: relative;
-    overflow: visible !important;
+    /*overflow: visible !important;*/
 }
 
 html, body {
@@ -691,7 +692,7 @@ a {
     padding: 15px;
 }
 
-.project-section .content{
+.project-section .content {
     z-index: 10;
 }
 
@@ -705,7 +706,6 @@ a {
     margin-bottom: 40px;
     max-width: 290px;
 }
-
 
 .project-section .numbers {
     margin-bottom: 40px;
@@ -721,7 +721,7 @@ a {
     padding: 15px;
 }
 
-.press-section .content{
+.press-section .content {
     z-index: 10;
 }
 
@@ -784,7 +784,7 @@ a {
     position: relative;
 }
 
-.core-section .content{
+.core-section .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -805,7 +805,7 @@ a {
     width: 100%;
 }
 
-.component-section .content{
+.component-section .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -849,6 +849,52 @@ a {
     border-bottom: solid 1px #fff;
 }
 
+.sale-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+}
+
+.sale-section h2 {
+    margin-bottom: 100px;
+}
+
+.sale-section .content {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.sale-section .timeline {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sale-section .block {
+    position: relative;
+    height: 65px;
+    border-top: solid 3px #000;
+    border-left: solid 1px #000;
+    flex: 1;
+}
+
+.sale-section .block:last-child {
+    flex: 0;
+    width: 0;
+}
+
+.sale-section .block > .text {
+    position: absolute;
+    bottom: -33px;
+    left: -3px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
 /* MOBILE */
 
 @media (max-width: 800px) {
@@ -867,12 +913,12 @@ a {
     }
 }
 
-
 @media (max-width: 600px) {
     .press-section h2 {
         margin-bottom: 40px;
     }
-    .press-section .grid-item{
+
+    .press-section .grid-item {
         height: 100px;
         width: 100px;
     }
