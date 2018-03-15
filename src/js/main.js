@@ -313,6 +313,39 @@ $(document).ready(() => {
                     color: '#f2f2f2',
                 },
             ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('team-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '422px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '829px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+            ]
         }),];
     const myVivus = new Vivus('pathx');
     // start loading X animation

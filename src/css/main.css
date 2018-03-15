@@ -853,7 +853,7 @@ a {
     display: flex;
     flex-direction: column;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: -100px auto 0;
     width: 100%;
     padding: 15px;
     position: relative;
@@ -893,6 +893,26 @@ a {
     left: -3px;
     font-size: 0.75rem;
     white-space: nowrap;
+}
+
+.team-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: -100px auto 0 ;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+}
+
+.team-section .content {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.team-section .description {
+    font-size: 0.75rem;
 }
 
 /* MOBILE */
