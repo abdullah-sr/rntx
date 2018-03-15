@@ -325,14 +325,14 @@ $(document).ready(() => {
                 },
                 {
                     top: '-500px',
-                    left: '422px',
+                    left: '338px',
                     width: 1,
                     height: '200vh',
                     color: '#f2f2f2',
                 },
                 {
                     top: '-500px',
-                    left: '829px',
+                    left: '662px',
                     width: 1,
                     height: '200vh',
                     color: '#f2f2f2',

@@ -947,6 +947,10 @@ letter-spacing: 1.2px;
     font-size: 0.75rem;
 }
 
+.team-section .member {
+    flex: 1;
+}
+
 .line{
     border-top: solid 1px #000;
     width: 60px;
