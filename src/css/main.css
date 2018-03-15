@@ -162,7 +162,7 @@ h1 {
     letter-spacing: 0.86pt;
     display: block;
     cursor: pointer;
-    width: 60px;
+    width: 65px;
     height: 22px;
 }
 
@@ -180,11 +180,17 @@ h1 {
     margin-top: 0;
 }
 
+.whitelistcontainer{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
 .whitelistcontainer:hover .whitelist {
     margin-top: -22px;
 }
 
-button.telegram {
+.telegram {
     font-family: Overpass, sans-serif;
     font-size: 11px;
     letter-spacing: 0.86pt;
@@ -193,18 +199,22 @@ button.telegram {
     transition: background 0.37s ease;
     padding: 4px 10px 4px 10px;
     cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
 }
 
-button.telegram.dark:hover {
+
+.telegram.dark:hover {
     color: #1a1a1a;
     background-color: #fff;
-    font-family: 'Overpass-Bold', sans-serif;
+    border: 2px solid #fff;
 }
 
-button.telegram.light:hover {
+.telegram.light:hover {
     color: #fff;
     background-color: #1a1a1a;
-    font-family: 'Overpass-Bold', sans-serif;
+    border: 2px solid #1a1a1a;
 }
 
 h2 {
