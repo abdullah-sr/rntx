@@ -223,14 +223,17 @@ h2 {
     font-size: 3.7rem;
     letter-spacing: -1.7px;
     line-height: 60px;
+    z-index: 3;
 }
 
 h3 {
     font-family: Overpass, sans-serif;
-    /* the font for this will depend on the header, refer to design to see how big it is for each section */
-    font-size: 55px;
+    position: absolute;
+    font-weight: 800;
+    font-size: 7.5rem;
     color: #F7F7F7;
     letter-spacing: 0.8px;
+    z-index: 0;
 }
 
 h4 {
@@ -690,7 +693,7 @@ a {
 
 .project-section .reason {
     font-size: 0.9rem;
-    margin-right: 30px;
+    margin-right: 40px;
     margin-bottom: 40px;
     max-width: 280px;
     font-weight: 400;
@@ -739,10 +742,23 @@ a {
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
+    transition: 1s ease;
+}
+
+.press-section .grid-item:hover {
+  color: #1a1a1a;
 }
 
 .press-section .grid-item img {
     width: 100%;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: 0.37s ease;
+}
+
+.press-section .grid-item img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
 
 .papers-section {
@@ -792,7 +808,6 @@ max-width: 260px;
     margin: -100px auto 0 auto;
     max-width: 1000px;
     padding: 15px;
-    position: relative;
 }
 
 .core-section .content {
@@ -811,15 +826,15 @@ max-width: 260px;
   font-family: Overpass, sans-serif;
   font-weight: 400;
   font-size: 12px;
-letter-spacing: 1.2px;
-    max-width: 120px;
-    text-align: center;
+  letter-spacing: 1.2px;
+  max-width: 120px;
+  text-align: center;
 
 }
 
 .component-section {
     margin: -100px auto 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 15px;
     position: relative;
     width: 100%;
@@ -836,14 +851,16 @@ letter-spacing: 1.2px;
 .component-section h2 {
   font-weight: 700;
   font-size: 59px;
-  max-width: 270px;
+  max-width: 350px;
   letter-spacing: 1px;
+  margin-left: 20px;
+  z-index: 2;
 }
 
 .component-section .title {
     display: flex;
     align-items: center;
-    max-width: 265px;
+    max-width: 250px;
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 1.15px;
@@ -851,7 +868,7 @@ letter-spacing: 1.2px;
 
 .component-section .item {
     flex: 1;
-    margin-right: 60px;
+    margin-right: 50px;
     margin-bottom: 20px;
 }
 
@@ -873,6 +890,7 @@ letter-spacing: 1.2px;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.8px;
+    margin-left: -38px;
 }
 
 .component-section .list div {
@@ -881,11 +899,18 @@ letter-spacing: 1.2px;
     border-bottom: solid 1px #fff;
 }
 
+.component-section .list .usecases {
+  font-family: Overpass Mono, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+}
+
 .sale-section {
     display: flex;
     flex-direction: column;
     max-width: 1000px;
-    margin: -100px auto 0;
+    margin: -230px auto 0 auto;
     width: 100%;
     padding: 15px;
     position: relative;
@@ -920,6 +945,9 @@ letter-spacing: 1.2px;
 }
 
 .sale-section .block > .text {
+    font-family: Overpass Mono, sans-serif;
+    font-weight: 600;
+    letter-spacing: '0.6px';
     position: absolute;
     bottom: -33px;
     left: -3px;
