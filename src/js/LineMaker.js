@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
@@ -14,7 +14,7 @@
 
 	// Helper vars and functions.
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -47,7 +47,7 @@
 		color: '#000',
 		hidden: true,
 		animation: {
-			duration: 700,
+			duration: 900,
 			easing: 'linear',
 			delay: 500,
 			direction: 'TopBottom'
@@ -90,7 +90,7 @@
 		else if( opts.animation.direction === 'RightLeft' ) {
 			tOrigin = '100% 50%';
 		}
-		
+
 		this.el.style.WebkitTransformOrigin = this.el.style.transformOrigin = tOrigin;
 	};
 
@@ -260,7 +260,7 @@
 	LineMaker.prototype._toggleLine = function(lineIdx, action) {
 		var line = this.lines[lineIdx];
 		if( !line ) { return; }
-		
+
 		if( action === 'show' && !line.rendered ) {
 			line.show();
 		}
@@ -317,7 +317,7 @@
 	LineMaker.prototype.showLine = function(lineIdx) {
 		this._toggleLine(lineIdx, 'show');
 	};
-	
+
 	/**
 	 * Hides one line.
 	 * lineIndex: index/position of the line in the LineMaker.options.lines array.
