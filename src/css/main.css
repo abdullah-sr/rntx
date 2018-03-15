@@ -118,6 +118,7 @@ body {
 
 .menuitem.dark span {
     font-family: Overpass, sans-serif;
+    font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -147,17 +148,11 @@ body {
 
 h1 {
     font-family: Overpass, sans-serif;
-    font-size: 8rem;
+    font-weight: 900;
+    font-size: 7.3rem;
     color: #FFFFFF;
     letter-spacing: 9.23px;
     margin: 0;
-}
-
-.subheader {
-    font-family: Overpass, sans-serif;
-    font-size: 12px;
-    color: #FFFFFF;
-    letter-spacing: 1.7px;
 }
 
 .floattext span {
@@ -214,8 +209,8 @@ button.telegram.light:hover {
 
 h2 {
     font-family: Overpass, sans-serif;
-    font-weight: 400;
-    font-size: 3.2rem;
+    font-weight: 800;
+    font-size: 3.7rem;
     letter-spacing: -1.7px;
     line-height: 60px;
 }
@@ -230,7 +225,7 @@ h3 {
 
 h4 {
     font-family: Overpass Mono, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 12px;
     letter-spacing: 0;
 }
@@ -251,10 +246,11 @@ h6 {
     width: 0;
     transform: rotate(-90deg);
     font-family: Overpass, sans-serif;
+    font-weight: 800;
     font-size: 12px;
     letter-spacing: 0;
     border-left: 1px solid #000;
-    padding-left: 8px;
+    padding-left: 20px;
 }
 
 .papers {
@@ -279,34 +275,12 @@ h6 {
 
 .papers-section .contribute {
     font-family: Overpass, sans-serif;
+    font-weight: 800;
     font-size: 18px;
     letter-spacing: 1.33px;
     margin: 75px auto 20px;
     text-align: center;
     max-width: 400px;
-}
-
-.core {
-    font-family: Overpass, sans-serif;
-    font-size: 144px;
-    letter-spacing: 10.29px;
-}
-
-.core .subtitle {
-    font-family: Overpass, sans-serif;
-    font-size: 12px;
-    letter-spacing: 1.2px;
-}
-
-.core .sectiontitle {
-    font-size: 59px;
-    letter-spacing: 1px;
-}
-
-.core .definition {
-    font-family: Overpass, sans-serif;
-    font-size: 23px;
-    letter-spacing: 1.15px;
 }
 
 .core .description {
@@ -581,7 +555,7 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -658,23 +632,27 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 .home-section .title-container {
     max-width: 350px;
-    margin: 0 auto;
+    margin: 0 0 0 auto;
 }
 
 .home-section .title-container .content {
-    font-size: 0.9rem;
+    font-size: 0.73rem;
+    font-family: Overpass, sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 1.7px;
 }
 
 .home-section .title-container .hl {
     border-top: solid 1px #fff;
-    margin-top: -20px;
+    margin-top: 10px;
     margin-bottom: 12px;
-    width: 30%;
+    width: 25%;
 }
 
 .home-section .ball-container {
@@ -704,11 +682,17 @@ a {
     font-size: 0.9rem;
     margin-right: 30px;
     margin-bottom: 40px;
-    max-width: 290px;
+    max-width: 280px;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .project-section .numbers {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+}
+
+.project-section h2 {
+  margin-bottom: 65px;
 }
 
 .press-section {
@@ -742,6 +726,7 @@ a {
     margin-top: -1px;
     color: #c4c4c4;
     font-size: 1.2rem;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
 }
@@ -763,15 +748,31 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 280px;
+    max-width: 290px;
     margin-bottom: 40px;
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .papers-section .paper .title {
     padding-bottom: 30px;
     border-bottom: solid 1px #fff;
     margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 23px;
+    letter-spacing: 1.15px;
+    transition: 0.5s ease;
+}
+
+.paper-section .paper .title:hover {
+  padding-bottom: 10px;
+  border-width: 2px;
+}
+
+.paper-section .paper .descriptions {
+font-weight: 700;
+font-size: 12px;
+letter-spacing: 0.77pt;
+max-width: 260px;
 }
 
 .core-section {
@@ -791,7 +792,16 @@ a {
     z-index: 10;
 }
 
-.core-section h4 {
+.core-section h1 {
+  font-size: 9rem;
+  letter-spacing: 10.29px;
+}
+
+.core-section h7 {
+  font-family: Overpass, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+letter-spacing: 1.2px;
     max-width: 120px;
     text-align: center;
 
@@ -813,10 +823,20 @@ a {
     width: 100%;
 }
 
+.component-section h2 {
+  font-weight: 700;
+  font-size: 59px;
+  max-width: 270px;
+  letter-spacing: 1px;
+}
+
 .component-section .title {
     display: flex;
     align-items: center;
-    font-size: 1.75rem;
+    max-width: 265px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1.15px;
 }
 
 .component-section .item {
@@ -840,7 +860,9 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
 }
 
 .component-section .list div {
