@@ -947,6 +947,16 @@ letter-spacing: 1.2px;
     font-size: 0.75rem;
 }
 
+.line{
+    border-top: solid 1px #000;
+    width: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    /* sum of numbers below need to == -width */
+    margin-left: -70px;
+    margin-right: 10px;
+}
+
 /* MOBILE */
 
 @media (max-width: 800px) {

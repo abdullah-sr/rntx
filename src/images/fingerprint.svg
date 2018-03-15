@@ -50,16 +50,16 @@
         <path stroke="#FFF" stroke-linecap="square" stroke-width="2" d="M119 98h33.734M119 98V51M119 50.5h-12.565M75.75 50.333h-5.274"/>
         <path fill="url(#a)" stroke="#FFF" stroke-linecap="square" stroke-width="2" d="M68.75 31.52H66"/>
         <path stroke="#FFF" stroke-linecap="square" stroke-width="2" d="M69.667 31.52v18.81M270 259v48M345 316h-48M387.468 73.5H351M387.667 72.449v-9.175M326.987 73.782H265M146.47 211.667H84.476M50 211H20M20 241v-30"/>
-        <text fill="#FFF" font-family=".AppleSystemUIFont" font-size="13" letter-spacing=".929">
+        <text fill="#FFF" font-family="Overpass, sans-serif" font-size="13" letter-spacing=".929">
             <tspan x="272.681" y="320">FR</tspan> <tspan x="276.694" y="336">A</tspan>
         </text>
-        <text fill="#FFF" font-family=".AppleSystemUIFont" font-size="13" letter-spacing=".929">
+        <text fill="#FFF" font-family="Overpass, sans-serif" font-size="13" letter-spacing=".929">
             <tspan x="334.737" y="79">U</tspan> <tspan x="335.292" y="95">K</tspan>
         </text>
-        <text fill="#FFF" font-family=".AppleSystemUIFont" font-size="13" letter-spacing=".929">
+        <text fill="#FFF" font-family="Overpass, sans-serif" font-size="13" letter-spacing=".929">
             <tspan x="81.564" y="55">RU</tspan> <tspan x="86.932" y="71">S</tspan>
         </text>
-        <text fill="#FFF" font-family=".AppleSystemUIFont" font-size="13" letter-spacing=".929">
+        <text fill="#FFF" font-family="Overpass, sans-serif" font-size="13" letter-spacing=".929">
             <tspan x="54.31" y="216">JAP</tspan>
         </text>
     </g>
