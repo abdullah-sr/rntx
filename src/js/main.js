@@ -120,29 +120,29 @@ $(document).ready(() => {
             lines: [
                 {
                     top: '-500px',
-                    left: '-300px',
+                    left: '19vw',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '60px',
+                    left: '40vw',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '360px',
+                    left: '60vw',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '660px',
-                    right: '15px',
+                    left: 'auto',
+                    right: '19vw',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -160,14 +160,14 @@ $(document).ready(() => {
                 },
                 {
                     top: '-500px',
-                    left: '422px',
+                    left: '335px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '829px',
+                    left: '655px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -175,7 +175,7 @@ $(document).ready(() => {
                 {
                     top: '-500px',
                     left: 'auto',
-                    right: '0',
+                    right: '15px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -193,14 +193,14 @@ $(document).ready(() => {
                 },
                 {
                     top: '-500px',
-                    left: '422px',
+                    left: '335px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '829px',
+                    left: '655px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -208,7 +208,7 @@ $(document).ready(() => {
                 {
                     top: '-500px',
                     left: 'auto',
-                    right: '0',
+                    right: '15px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -226,14 +226,14 @@ $(document).ready(() => {
                 },
                 {
                     top: '-500px',
-                    left: '422px',
+                    left: '335px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '829px',
+                    left: '655px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -241,7 +241,7 @@ $(document).ready(() => {
                 {
                     top: '-500px',
                     left: 'auto',
-                    right: '0',
+                    right: '15px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -259,14 +259,14 @@ $(document).ready(() => {
                 },
                 {
                     top: '-500px',
-                    left: '422px',
+                    left: '335px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '829px',
+                    left: '655px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -274,7 +274,7 @@ $(document).ready(() => {
                 {
                     top: '-500px',
                     left: 'auto',
-                    right: '0',
+                    right: '15px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -292,14 +292,14 @@ $(document).ready(() => {
                 },
                 {
                     top: '-500px',
-                    left: '422px',
+                    left: '335px',
                     width: 1,
                     height: '200vh',
                     color: '#f2f2f2',
                 },
                 {
                     top: '-500px',
-                    left: '829px',
+                    left: '655px',
                     width: 1,
                     height: '200vh',
                     color: '#f2f2f2',
@@ -307,7 +307,7 @@ $(document).ready(() => {
                 {
                     top: '-500px',
                     left: 'auto',
-                    right: '0',
+                    right: '15px',
                     width: 1,
                     height: '200vh',
                     color: '#f2f2f2',
@@ -349,7 +349,7 @@ $(document).ready(() => {
         }),];
     const myVivus = new Vivus('pathx');
     // start loading X animation
-    myVivus.play(50, async () => {
+    myVivus.play(1, async () => {
         myVivus.reset();
         $('#xtext').fadeIn(1000, () => {
             // fade out of loading screen
