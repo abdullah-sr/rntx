@@ -26,7 +26,7 @@
     <div class="section active home-section" data-anchor="home">
         <%= require('./common.html') %>
         <div class="left-col">
-            <div class="title-container">
+            <div class="title-container" id="title-container">
                 <h1>RNTX</h1>
                 <div class="hl"></div>
                 <div class="content">
@@ -40,11 +40,11 @@
     <div class="section inverted center-vertically" data-anchor="project">
         <%= require('./common.html') %>
         <div id="project-section" class="project-section">
-            <div class="content">
-                <h4><span class="line"></span>LEVERAGING THE BLOCKCHAIN TO REDEFINE RENTER-LANDLORD INTERACTIONS</h4>
-                <h2>A global, transparent, and decentralized rental ecosystem</h2>
+            <div class="content" id="contentp">
+                <h4 id="project-h4"><span class="line"></span>LEVERAGING THE BLOCKCHAIN TO REDEFINE RENTER-LANDLORD INTERACTIONS</h4>
+                <h2 id="project-h2">A global, transparent, and decentralized rental ecosystem</h2>
                 <h5>…catalyzing social change and presenting solutions to the following problems:</h5>
-                <div class="flex-rw">
+                <div class="flex-rw" id="project-reasons">
                     <div class="reason">
                         <div class="numbers">01</div>
                         Dependence on credit scores that fail to provide transparency + information truly reflective of
@@ -67,7 +67,7 @@
         <div id="press-section" class="press-section">
             <div class="content">
                 <h4><span class="line"></span>WE HIT THE GROUND SPRINTING</h4>
-                <h2>RentHoop Runs RntX</h2>
+                <h2 class="press-h2">RentHoop Runs RntX</h2>
                 <div class="flex-rw grid">
                     <div class="grid-item">
                         <a href="https://www.forbes.com/sites/tomaslaurinavicius/2018/02/16/housing-apps-to-watch/#124eb35a25b5"
@@ -104,7 +104,7 @@
                         </a>
                     </div>
                     <div class="grid-item">
-                        <div>36,873</div>
+                        <div>37,000+</div>
                         <div>users</div>
                     </div>
                     <div class="grid-item">
@@ -137,7 +137,7 @@
             <div class="content">
                 <h4><span class="line light"></span>DIVE DEEPER</h4>
                 <h2>Learn how RntX works</h2>
-                <div class="flex-rw papers">
+                <div class="flex-rw papers" id="paperlinks">
                     <div class="paper">
                         <div class="title">WHITEPAPER</div>
                         <div class="descriptions">
@@ -238,7 +238,7 @@
                             INCENTIVIZATION<br>
                             SECURITY DEPOSITS<br>
                             ROOMMATE FINDING <br>
-                            <b>READ THE WHITEPAPER</b>
+                            <a href="#papers"><b>READ THE WHITEPAPER</b></a>
                         </div>
                     </div>
                 </div>
