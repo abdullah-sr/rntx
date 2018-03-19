@@ -477,7 +477,7 @@ async function animateNav() {
     // hide nav on section leave
     const $menuItem = $('.menuitem').removeClass(`animated ${animation}`);
     await sleep(500);
-    $menuItem.animateCss(animation);
+    $menuItem.animateCss(animation, false);
 }
 
 
@@ -486,7 +486,7 @@ function sleep(ms) {
 }
 
 $.fn.extend({
-    animateCss(animationName, callback) {
+    animateCss(animationName, remove = true, callback) {
         const animationEnd = ((el) => {
             const animations = {
                 animation: 'animationend',
@@ -503,10 +503,15 @@ $.fn.extend({
         })(document.createElement('div'));
 
         this.addClass('animated ' + animationName).one(animationEnd, () => {
+            if (remove) {
+                $(this).removeClass('animated ' + animationName);
+            }
             if (typeof callback === 'function') callback(this);
         });
 
         return this;
-    },
-});
+    }
+    ,
+})
+;
 

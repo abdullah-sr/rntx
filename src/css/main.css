@@ -157,6 +157,7 @@ h1 {
 
 .floattext span {
     font-family: Overpass, sans-serif;
+    font-weight: 800;
     font-size: 11px;
     line-height: 22px;
     letter-spacing: 0.86pt;
@@ -192,6 +193,7 @@ h1 {
 
 .telegram {
     font-family: Overpass, sans-serif;
+    font-weight: 800;
     font-size: 11px;
     letter-spacing: 0.86pt;
     background: transparent;
@@ -1000,6 +1002,16 @@ a {
 
 .line {
     border-top: solid 1px #000;
+    width: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    /* sum of numbers below need to == -width */
+    margin-left: -70px;
+    margin-right: 10px;
+}
+
+.linewhite{
+    border-top: solid 1px #fff;
     width: 60px;
     display: inline-block;
     vertical-align: middle;
