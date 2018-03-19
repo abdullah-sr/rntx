@@ -1044,6 +1044,14 @@ a {
     background-color: #fff;
 }
 
+.close{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
 /* MOBILE */
 
 @media (max-width: 800px) {
