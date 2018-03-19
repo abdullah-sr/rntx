@@ -789,15 +789,15 @@ a {
 }
 
 .papers-section .paper .title:hover {
-  padding-bottom: 10px;
-  border-width: 2px;
+    padding-bottom: 10px;
+    border-width: 2px;
 }
 
 .papers-section .paper .descriptions {
-font-weight: 700;
-font-size: 12px;
-letter-spacing: 0.77pt;
-max-width: 260px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.77pt;
+    max-width: 260px;
 }
 
 .core-section {
@@ -975,7 +975,20 @@ max-width: 260px;
 }
 
 .team-section .member {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.team-section .member.wrap {
+    flex-basis: 100%;
+}
+
+.team-section .member img {
+    margin-bottom: 15px;
+    max-width: 140px;
 }
 
 .faqs-section {
@@ -1010,7 +1023,7 @@ max-width: 260px;
     margin-right: 10px;
 }
 
-.linewhite{
+.linewhite {
     border-top: solid 1px #fff;
     width: 60px;
     display: inline-block;
@@ -1043,7 +1056,7 @@ max-width: 260px;
     transition: background 0.3s ease;
 }
 
-.social a svg{
+.social a svg {
     height: 30px;
     width: auto !important;
     margin-top: -5px;
@@ -1056,7 +1069,7 @@ max-width: 260px;
     background-color: #fff;
 }
 
-.close{
+.close {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -1097,13 +1110,13 @@ max-width: 260px;
     }
 }
 
-
 /*********************************/
 
 .accordion dl,
 .accordion-list {
     /*border: 1px solid #ddd;*/
 }
+
 .accordion dl:after,
 .accordion-list:after {
     content: "";
@@ -1142,6 +1155,7 @@ max-width: 260px;
     transition: background-color 0.5s ease-in-out;
     /*border-bottom: 1px solid #30bb64;*/
 }
+
 .accordionTitle:before,
 .accordion__Heading:before {
     content: "+";
@@ -1152,14 +1166,15 @@ max-width: 260px;
     /*float: left;*/
     transition: 0.3s ease-in-out;
 }
+
 /*.accordionTitle:hover,*/
 /*.accordion__Heading:hover {*/
-    /*background-color: #2ba659;*/
+/*background-color: #2ba659;*/
 /*}*/
 
 /*.accordionTitleActive,*/
 /*.accordionTitle.is-expanded {*/
-    /*background-color: #2ba659;*/
+/*background-color: #2ba659;*/
 /*}*/
 .accordionTitleActive:before,
 .accordionTitle.is-expanded:before {
@@ -1175,6 +1190,7 @@ max-width: 260px;
     -webkit-transition: max-height 1s;
     transition: max-height 1s;
 }
+
 @media screen and (min-width: 48em) {
     .accordionItem {
         max-height: 15em;
@@ -1230,6 +1246,7 @@ max-width: 260px;
         transform: scale(1);
     }
 }
+
 @-webkit-keyframes accordionOut {
     0% {
         opacity: 1;
@@ -1242,6 +1259,7 @@ max-width: 260px;
         transform: scale(0.9) rotateX(-60deg);
     }
 }
+
 @keyframes accordionOut {
     0% {
         opacity: 1;
