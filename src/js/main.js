@@ -9,8 +9,14 @@ import '../css/main.css';
 import Vivus from 'vivus';
 import $ from 'jquery';
 import 'fullpage.js';
+import fontawesome from '@fortawesome/fontawesome';
+import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
+import faMedium from '@fortawesome/fontawesome-free-brands/faMedium';
+import faTwitterSquare from '@fortawesome/fontawesome-free-brands/faTwitterSquare';
 import initBall from './ball_animation';
 
+
+fontawesome.library.add(faFacebookSquare, faMedium, faTwitterSquare);
 
 $(document).ready(() => {
     require('./LineMaker');

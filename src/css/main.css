@@ -1012,6 +1012,38 @@ a {
     border-top: solid 1px #fff;
 }
 
+.social {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a {
+    display: block;
+    margin: 20px;
+    color: #fff;
+    background-color: #000;
+    transition: background 0.3s ease;
+}
+
+.social a svg{
+    height: 30px;
+    width: auto !important;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    vertical-align: middle !important;
+}
+
+.social a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
 /* MOBILE */
 
 @media (max-width: 800px) {

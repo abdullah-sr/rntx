@@ -56,6 +56,10 @@
     "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.8",
+    "@fortawesome/fontawesome-free-regular": "^5.0.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "animate.css": "^3.6.1",
     "animejs": "^2.2.0",
     "babel-polyfill": "^6.26.0",
