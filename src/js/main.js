@@ -358,6 +358,16 @@ $(document).ready(() => {
                 verticalCentered: false,
                 onLeave: (index, nextIndex) => {
                     animateNav();
+                    $('#contentp').animateCss('fadeIn');
+                    $('#project-h2').animateCss('slideInRight');
+                    $('#project-reasons').animateCss('slideInUp');
+                    $('#wlc').animateCss('slideInDown');
+                    $('#press-section').animateCss('fadeIn');
+                    $('#press-h2').animateCss('slideInDown');
+                    $('#papers-section').animateCss('fadeIn');
+                    $('#papers-h2').animateCss('slideInRight');
+                    $('#paperlinks').animateCss('slideInUp');
+                    $('#core-section').animateCss('slideInUp');
                     if (lineMakers[index - 1])
                         lineMakers[index - 1].hideLines(index - 1);
                     if (lineMakers[nextIndex - 1])
