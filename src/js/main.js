@@ -353,6 +353,39 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
+            parent: { element: document.getElementById('advisors-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '338px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '662px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+            ]
+        }), new LineMaker({
             parent: { element: document.getElementById('faqs-section') },
             lines: [
                 {
@@ -396,17 +429,58 @@ $(document).ready(() => {
             $('#fullpage').fullpage({
                 verticalCentered: false,
                 onLeave: (index, nextIndex) => {
-                    animateNav();
-                    $('#contentp').animateCss('fadeIn');
-                    $('#project-h2').animateCss('slideInRight');
-                    $('#project-reasons').animateCss('slideInUp');
-                    $('#wlc').animateCss('slideInDown');
-                    $('#press-section').animateCss('fadeIn');
-                    $('#press-h2').animateCss('slideInDown');
-                    $('#papers-section').animateCss('fadeIn');
-                    $('#papers-h2').animateCss('slideInRight');
-                    $('#paperlinks').animateCss('slideInUp');
-                    $('#core-section').animateCss('slideInUp');
+                    animateNav();              
+                    if ((nextIndex - 1) == 0) {
+                      $('#title-container').animateCss('fadeInDown');
+                    }
+                    if ((nextIndex - 1) == 1) {
+                      $('#contentp').animateCss('fadeIn');
+                      $('#project-h2').animateCss('slideInRight');
+                      $('#project-reasons').animateCss('slideInUp');
+                    }
+                    if ((nextIndex - 1) == 2) {
+                      $('#press-section').animateCss('fadeIn');
+                      $('#press-h2').animateCss('slideInRight');
+                    }
+                    if ((nextIndex - 1) == 3) {
+                      $('#papers-section').animateCss('fadeIn');
+                      $('#papers-h2').animateCss('slideInRight');
+                      $('#paperlinks').animateCss('slideInUp');
+                    }
+                    if ((nextIndex - 1) == 4) {
+                      $('#core-section').animateCss('slideInUp');
+                    }
+                    if ((nextIndex - 1) == 5) {
+                      $('#renterid-h2').animateCss('slideInRight');
+                      $('#renterid-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 6) {
+                      $('#renteriq-h2').animateCss('slideInRight');
+                      $('#renteriq-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 7) {
+                      $('#rscore-h2').animateCss('slideInRight');
+                      $('#rscore-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 8) {
+                      $('#token-h2').animateCss('slideInRight');
+                      $('#token-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 9) {
+                      $('#tokensale-h2').animateCss('slideInRight');
+                    }
+                    if ((nextIndex - 1) == 10) {
+                      $('#team-h2').animateCss('slideInRight');
+                      $('#flex-team').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 11) {
+                      $('#advisors-h2').animateCss('slideInRight');
+                      $('#flex-advisors').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 12) {
+                      $('#flex-faq').animateCss('fadeInUp');
+                      $('#faq-h2').animateCss('slideInRight');
+                    }
                     if (lineMakers[index - 1])
                         lineMakers[index - 1].hideLines(index - 1);
                     if (lineMakers[nextIndex - 1])
@@ -524,4 +598,3 @@ $.fn.extend({
     ,
 })
 ;
-
