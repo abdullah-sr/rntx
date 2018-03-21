@@ -206,17 +206,18 @@ h1 {
     right: 50px;
 }
 
-.telegram.dark:hover {
+.section .telegram:hover {
     color: #1a1a1a;
     background-color: #fff;
     border: 2px solid #fff;
 }
 
-.telegram.light:hover {
+.section.inverted .telegram:hover {
     color: #fff;
     background-color: #1a1a1a;
     border: 2px solid #1a1a1a;
 }
+
 
 h2 {
     font-family: Overpass, sans-serif;
@@ -341,45 +342,44 @@ h6 {
     letter-spacing: 1.33px;
 }
 
-.slide-title{
-  animation: glitch-anim-title 0.25s linear 3s alternate 5 backwards;
+.slide-title {
+    animation: glitch-anim-title 0.25s linear 3s alternate 5 backwards;
 }
 
-
 @keyframes glitch-anim-title {
-	0%, 100% {
-		transform: translate3d(2px, -2px, 0);
-		-webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-		clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-	}
-	20% {
-		-webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-		clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-	}
-	41% {
-		-webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-		clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-	}
-	52% {
-		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-		clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-	}
-	61% {
-		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-		clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-	}
-	75% {
-		-webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-	}
-	80% {
-		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-	}
-	96% {
-		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-	}
+    0%, 100% {
+        transform: translate3d(2px, -2px, 0);
+        -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+        clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    }
+    20% {
+        -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+        clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    }
+    41% {
+        -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+        clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    }
+    52% {
+        -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    }
+    61% {
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    }
+    75% {
+        -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    }
+    80% {
+        -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    }
+    96% {
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    }
 }
 
 /* ==========================================================================
@@ -676,6 +676,10 @@ a {
 
 }
 
+.home-section .close {
+    display: none;
+}
+
 .home-section .left-col {
     flex: 2;
     display: flex;
@@ -835,6 +839,10 @@ a {
     border-width: 2px;
 }
 
+.papers-section .paper .title a{
+    padding: 10px 0;
+}
+
 .papers-section .paper .descriptions {
     font-weight: 700;
     font-size: 12px;
@@ -849,6 +857,7 @@ a {
     margin: -100px auto 0 auto;
     max-width: 1000px;
     padding: 15px;
+    position: relative;
 }
 
 .core-section .content {
@@ -1048,7 +1057,7 @@ a {
     flex-direction: column;
     align-items: center;
     margin: -100px auto 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 15px;
     width: 100%;
 }
@@ -1061,7 +1070,9 @@ a {
 .faqs-section .question {
     flex: 1;
     margin-right: 20px;
-    height: 100px;
+    height: 200px;
+    min-width: 250px;
+    max-width: 300px;
 }
 
 .line {
@@ -1246,15 +1257,15 @@ a {
     font-weight: 400;
     font-size: 12px;
     height: auto;
-    overflow: scroll;
-    max-height: 30px;
+    overflow: hidden;
+    /*max-height: 30px;*/
     -webkit-transition: max-height 1s;
     transition: max-height 1s;
 }
 
 @media screen and (min-width: 48em) {
     .accordionItem {
-        max-height: 10em;
+        /*max-height: 10em;*/
         -webkit-transition: max-height 0.5s;
         transition: max-height 0.5s;
     }
