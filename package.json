@@ -4,8 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server -d --progress --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack -p --progress --config webpack.config.js"
+    "start": "cross-env NODE_ENV=development webpack-dev-server -d --progress --config webpack.config.js",
+    "prestart": "cross-env NODE_ENV=production webpack -p --progress --config webpack.config.js"
   },
   "author": "",
   "license": "MIT",
@@ -56,11 +56,13 @@
     "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
+    "@newrelic/native-metrics": "^2.2.0",
     "animate.css": "^3.6.1",
     "babel-polyfill": "^6.26.0",
     "fullpage.js": "^2.9.6",
     "gsap": "^1.20.4",
     "jquery": "^3.3.1",
+    "newrelic": "^3.1.0",
     "normalize.css": "^8.0.0",
     "typeface-overpass": "0.0.54",
     "typeface-overpass-mono": "0.0.54",
