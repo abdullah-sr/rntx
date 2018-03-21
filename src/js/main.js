@@ -126,29 +126,28 @@ $(document).ready(() => {
             lines: [
                 {
                     top: '-500px',
-                    left: '19vw',
+                    left: '-200px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '40vw',
+                    left: '90px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '60vw',
+                    left: '370px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: 'auto',
-                    right: '19vw',
+                    left: '660px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -428,6 +427,7 @@ $(document).ready(() => {
             $('#loading').fadeOut(700);
             $('#fullpage').fullpage({
                 verticalCentered: false,
+                scrollingSpeed: 800,
                 onLeave: (index, nextIndex) => {
                     animateNav();              
                     if ((nextIndex - 1) == 0) {
