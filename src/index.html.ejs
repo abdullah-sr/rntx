@@ -23,83 +23,27 @@
     </div>
 </div>
 <div id="fullpage">
-    <div class="section home-section">
-        <%= require('./navigation.html') %>
+    <div class="section active home-section" data-anchor="home">
+        <%= require('./common.html') %>
         <div class="left-col">
-            <div class="title-container">
-                <h1>RNTX</h1>
+            <div class="title-container" id="title-container">
+                <div class="slide-title"><h1>RNTX</h1></div>
                 <div class="hl"></div>
                 <div class="content">
                     CONNECTING RENTERS & LANDLORDS IN A TRANSPARENT, DECENTRALIZED WORLD
                 </div>
             </div>
         </div>
-
         <div id="ball-container" class="ball-container"></div>
     </div>
-    <div class="section inverted center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="press-section">
-            <div class="content">
-                <h4>WE HIT THE GROUND SPRINTING</h4>
-                <h2>RentHoop Runs RntX</h2>
-                <div class="flex-rw grid">
-                    <div class="grid-item">
-                        <img src="<%= require('./images/forbes.png') %>"/>
-                    </div>
-                    <div class="grid-item">
-                        <img src="<%= require('./images/nbc-cloud.png') %>"/>
-                        <img src="<%= require('./images/nbc.png') %>"/>
-                    </div>
-                    <div class="grid-item">
-                        <img src="<%= require('./images/chicago.png') %>"/>
-                        <img src="<%= require('./images/tribune.png') %>"/>
-                    </div>
-                    <div class="grid-item">
-                        <img src="<%= require('./images/geekwire.png') %>"/>
-                    </div>
-                    <div class="grid-item">
-                        <img src="<%= require('./images/usatoday.png') %>"/>
-                    </div>
-                    <div class="grid-item">
-                        <img src="<%= require('./images/mtvu.png') %>"/>
-                    </div>
-                    <div class="grid-item">
-                        <div>36,873</div>
-                        <div>users</div>
-                    </div>
-                    <div class="grid-item">
-                        <div>25</div>
-                        <div>press hits</div>
-                    </div>
-                    <div class="grid-item">
-                        <div>106</div>
-                        <div>countries</div>
-                    </div>
-                    <div class="grid-item">
-                        <div>50</div>
-                        <div>states</div>
-                    </div>
-                    <div class="grid-item">
-                        <div>2534</div>
-                        <div>Universities</div>
-                    </div>
-                    <div class="grid-item">
-                        <div>Canadians</div>
-                        <div>use it</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section inverted center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="project-section">
-            <div class="content">
-                <h4>LEVERAGING THE BLOCKCHAIN TO REDEFINE RENTER-LANDLORD INTERACTIONS</h4>
-                <h2>A global, transparent, and decentralized rental ecosystem</h2>
+    <div class="section inverted center-vertically" data-anchor="project">
+        <%= require('./common.html') %>
+        <div id="project-section" class="project-section">
+            <div class="content" id="contentp">
+                <h4 id="project-h4"><span class="line"></span>LEVERAGING THE BLOCKCHAIN TO REDEFINE RENTER-LANDLORD INTERACTIONS</h4>
+                <h2 id="project-h2">A global, transparent, and decentralized rental ecosystem</h2>
                 <h5>…catalyzing social change and presenting solutions to the following problems:</h5>
-                <div class="flex-rw">
+                <div class="flex-rw" id="project-reasons">
                     <div class="reason">
                         <div class="numbers">01</div>
                         Dependence on credit scores that fail to provide transparency + information truly reflective of
@@ -117,21 +61,90 @@
             </div>
         </div>
     </div>
-    <div class="section center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="paper-section">
-            <div class="">
-                <h4>DIVE DEEPER</h4>
-                <h2>Learn how RntX works</h2>
-                <div class="flex-rw papers">
+    <div class="section inverted center-vertically" data-anchor="press">
+        <%= require('./common.html') %>
+        <div id="press-section" class="press-section">
+            <div class="content">
+                <h4><span class="line"></span>WE HIT THE GROUND SPRINTING</h4>
+                <h2 class="press-h2" id="press-h2">RentHoop Runs RntX</h2>
+                <div class="flex-rw grid" id="press-grid">
+                    <div class="grid-item">
+                        <a href="https://www.forbes.com/sites/tomaslaurinavicius/2018/02/16/housing-apps-to-watch/#124eb35a25b5"
+                           target="_blank">
+                            <img src="<%= require('./images/forbes-c.png') %>"/>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="http://www.nbcnews.com/feature/college-game-plan/meet-24-year-old-who-invented-tinder-roommates-n621101"
+                           target="_blank">
+                            <img src="<%= require('./images/nbc-c.png') %>"/>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="http://www.chicagotribune.com/classified/realestate/ct-re-0121-choosing-roommate-20180115-story.html"
+                           target="_blank">
+                            <img src="<%= require('./images/chicago-c.png') %>"/>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="http://www.geekwire.com/2016/renthoop/" target="_blank">
+                            <img src="<%= require('./images/geekwire-c.png') %>"/>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="http://college.usatoday.com/2016/07/20/swipe-right-for-the-roommate-of-your-dreams/"
+                           target="_blank">
+                            <img src="<%= require('./images/usatoday-c.png') %>"/>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://twitter.com/mtvU/status/756526429819510785" target="_blank">
+                            <img src="<%= require('./images/mtvu-c.png') %>"/>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <div>37,000+</div>
+                        <div>users</div>
+                    </div>
+                    <div class="grid-item">
+                        <div>25</div>
+                        <div>press hits</div>
+                    </div>
+                    <div class="grid-item">
+                        <div>106</div>
+                        <div>countries</div>
+                    </div>
+                    <div class="grid-item">
+                        <div>50</div>
+                        <div>states</div>
+                    </div>
+                    <div class="grid-item">
+                        <div>10</div>
+                        <div>Universities</div>
+                    </div>
+                    <div class="grid-item">
+                        <div>Canadians</div>
+                        <div>use it</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section center-vertically" data-anchor="papers">
+        <%= require('./common.html') %>
+        <div id="papers-section" class="papers-section">
+            <div class="content">
+                <h4><span class="line light"></span>DIVE DEEPER</h4>
+                <h2 id="papers-h2">Learn how RntX works</h2>
+                <div class="flex-rw papers" id="paperlinks">
                     <div class="paper">
-                        <div class="title">WHITEPAPER</div>
+                        <div class="title"><a href="https://s3-us-west-1.amazonaws.com/rntx/RntXWP.pdf" target="_blank">WHITEPAPER</a></div>
                         <div class="descriptions">
                             PRESENTATION OF RNTX PROTOCOL + USE CASES
                         </div>
                     </div>
                     <div class="paper">
-                        <div class="title">MARKET & STRATEGY</div>
+                        <div class="title"><a href="https://s3-us-west-1.amazonaws.com/rntx/MarketandStrategy.pdf" target="_blank">MARKET & STRATEGY</a></div>
                         <div class="descriptions">
                             STATE OF THE MARKET AND ENTRY METHODOLOGY
                         </div>
@@ -139,6 +152,7 @@
                     <div class="paper">
                         <div class="title">BUSINESS FRAMEWORK</div>
                         <div class="descriptions">
+                          COMING SOON. <br>
                             DESCRIBES RNTX TOKEN LOGIC + ECONOMICS
                         </div>
                     </div>
@@ -149,73 +163,220 @@
             </div>
         </div>
     </div>
-    <div class="section center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="core-section">
-            <h1>CORE</h1>
-            <h4>UNDERSTAND THE BASICS</h4>
-        </div>
-    </div>
-    <div class="section center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RenterID</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/fingerprint.svg') %>"></div>
-                <div class=" item title">Facilitates a global renter identity.</div>
-                <div class="item list">
-                    <div>Providing security, transparency and privacy</div>
-                    <div>Verified by your network and third-parties</div>
-                </div>
+    <div class="section center-vertically" data-anchor="core">
+        <%= require('./common.html') %>
+        <div id="core-section" class="core-section">
+            <div class="content">
+                <h1>CORE</h1>
+                <h7>UNDERSTAND THE BASICS</h7>
             </div>
         </div>
     </div>
-    <div class="section center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RenterIQ</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/brain.svg') %>"></div>
-                <div class=" item title">A store of renter behaviour.</div>
-                <div class="item list">
-                    <div>Tracks current and historical rental information</div>
-                    <div>Fuels the RenterScore</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RenterScore</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/vitals.svg') %>"></div>
-                <div class=" item title">A metric of renter trustworthiness.</div>
-                <div class="item list">
-                    <div>Determined by a dynamic algorithm fueled by RenterIQ.</div>
-                    <div>Open source, transparent, community-driven, universal, adaptable.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section center-vertically">
-        <%= require('./navigation.html') %>
-        <div class="component-section">
-            <h2>RNTX Token</h2>
-            <div class="flex-rw">
-                <div class="item"><img src="<%= require('./images/xtext.png') %>"></div>
-                <div class=" item title">The means to transact in and incentivize the ecosystem.</div>
-                <div class="item list">
-                    <div>The RntX ecosystem links the core protocol to a tokenized layer of utility.</div>
-                    <div>Guide the evolution of the ID, IQ, and RenterScore.</div>
-                    <div>
-                        + Peek into use cases<br>
-                        RENTAL APPLICATIONS
-                        INCENTIVIZATION
-                        SECURITY DEPOSITS
-                        ROOMMATE FINDING <br>
-                        READ THE WHITEPAPER
+    <div class="section center-vertically" data-anchor="">
+        <%= require('./common.html') %>
+        <div id="renterid-section" class="component-section">
+            <div class="content">
+                <h2 id="renterid-h2">RenterID</h2>
+                <div class="flex-rw" id="renterid-flex">
+                    <div class="item"><img src="<%= require('./images/fingerprint.svg') %>"></div>
+                    <div class=" item title">Facilitates a global renter identity.</div>
+                    <div class="item list">
+                        <div>Providing security, transparency and privacy</div>
+                        <div>Verified by your network and third-parties</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section center-vertically" data-anchor="">
+        <%= require('./common.html') %>
+        <div id="renteriq-section" class="component-section">
+            <div class="content">
+                <h2 id="renteriq-h2">RenterIQ</h2>
+                <div class="flex-rw" id="renteriq-flex">
+                    <div class="item"><img src="<%= require('./images/brain.svg') %>"></div>
+                    <div class=" item title">A store of renter behaviour.</div>
+                    <div class="item list">
+                        <div>Tracks current and historical rental information</div>
+                        <div>Fuels the RenterScore</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section center-vertically" data-anchor="">
+        <%= require('./common.html') %>
+        <div id="renterscore-section" class="component-section">
+            <div class="content">
+                <h2 id="rscore-h2">RenterScore</h2>
+                <div class="flex-rw" id="rscore-flex">
+                    <div class="item"><img src="<%= require('./images/vitals.svg') %>"></div>
+                    <div class=" item title">A metric of renter trustworthiness.</div>
+                    <div class="item list">
+                        <div>Determined by a dynamic algorithm fueled by RenterIQ.</div>
+                        <div><s>Proprietary</s><br>Open source, transparent, community-driven, universal, adaptable.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section center-vertically" data-anchor="">
+        <%= require('./common.html') %>
+        <div id="token-section" class="component-section">
+            <div class="content">
+                <h2 id="token-h2">RNTX Token</h2>
+                <div class="flex-rw" id="token-flex">
+                    <div class="item"><img src="<%= require('./images/xtext.png') %>"></div>
+                    <div class=" item title">The means to transact in and incentivize the ecosystem.</div>
+                    <div class="item list">
+                        <div>The RntX ecosystem links the core protocol to a tokenized layer of utility.</div>
+                        <div>Guide the evolution of the ID, IQ, and RenterScore.</div>
+                        <div class="usecases">
+                            + Peek into use cases<br>
+                            RENTAL APPLICATIONS<br>
+                            INCENTIVIZATION<br>
+                            SECURITY DEPOSITS<br>
+                            ROOMMATE FINDING <br>
+                            <a href="#papers"><b>READ THE WHITEPAPER</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section inverted center-vertically" data-anchor="token">
+        <%= require('./common.html') %>
+        <div id="sale-section" class="sale-section">
+            <div class="content">
+                <h4><span class="line"></span>POWER THE NETWORK</h4>
+                <h2 id="tokensale-h2">Token Sale</h2>
+                <div class="flex-rw timeline">
+                    <div class="block">
+                        <span class="text">
+                            START<br>MAY 2018
+                        </span>
+                    </div>
+                    <div class="block">
+                        <span class="text">
+                            SOFT CAP<br>3 MILLION
+                        </span>
+                    </div>
+                    <div class="block">
+                        <span class="text">
+                            HARD CAP<br>37 MILLION
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section inverted center-vertically" data-anchor="team">
+        <%= require('./common.html') %>
+        <div id="team-section" class="team-section">
+            <div class="content">
+                <h4><span class="line"></span>MEET THE GOATs</h4>
+                <h2 id="team-h2">Team</h2>
+                <div class="flex-rw" id="flex-team">
+                    <div class="member">
+                        <img src="<%= require('./images/paul.png') %>"/>
+                        PAUL BURKE
+                        <div class="description">CO-FOUNDER</div>
+                    </div>
+                    <div class="member">
+                        <img src="<%= require('./images/neil.png') %>"/>
+                        NEIL
+                        <div class="description">CO-FOUNDER</div>
+                    </div>
+                    <div class="member">
+                        <img src="<%= require('./images/mo.png') %>"/>
+                        MO ALRADDADI
+                        <div class="description">CO-FOUNDER</div>
+                    </div>
+                    <div class="member wrap">
+                        <img src="<%= require('./images/derek.png') %>"/>
+                        DEREK MYSKA
+                        <div class="description">BLOCKCHAIN ENGINEER</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section inverted center-vertically" data-anchor="advisors">
+        <%= require('./common.html') %>
+        <div id="advisors-section" class="team-section">
+            <div class="content">
+                <h4><span class="line"></span>THE EXPERTS</h4>
+                <h2 id="advisors-h2">Advisors</h2>
+                <div class="flex-rw" id="flex-advisors">
+                    <div class="member">
+                        <img src="<%= require('./images/tim.png') %>"/>
+                        TIM MANSON
+                        <div class="description">REAL-ESTATE ADVISOR<div class="experience">Founder of PropertyConnect & Founders400</div></div>
+                    </div>
+                    <div class="member">
+                        <img src="<%= require('./images/dave.png') %>"/>
+                        DAVE ARTHURS
+                        <div class="description">TECHNICAL ADVISOR<div class="experience">CTO OpenCity, VP of Engineering at OpenTable and Laurel & Wolf</div></div>
+                    </div>
+                    <div class="member">
+                        <img src="<%= require('./images/darren.png') %>"/>
+                        DARREN AUSTIN
+                        <div class="description">PRODUCT ADVISOR<div class="experience">Founder of SeattleRentals<br> Experience at Amazon, Microsoft, Expedia, AOL, Motorola</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section center-vertically" data-anchor="faq">
+        <%= require('./common.html') %>
+        <div id="faqs-section" class="faqs-section">
+            <div class="content">
+                <h4><span class="line light"></span>LEARN BY ASKING</h4>
+                <h2 id="faq-h2">FAQ</h2>
+                <div class="flex-rw" id="flex-faq">
+                    <div class="question accordion">
+                        <div><a href="#accordion1"
+                                class="accordion-title accordionTitle js-accordionTrigger is-collapsed">
+                                Where can I find information regarding the token sale?
+                            </a></div>
+                        <div class="accordion-content accordionItem is-collapsed accordion__panel" id="accordion1">
+                            Right here on our website! We'll be gradually releasing details on the <a href="#token"><b>Token page</b></a>
+                        </div>
+                    </div>
+                    <div class="question accordion">
+                        <div><a href="#accordion2"
+                                class="accordion-title accordionTitle js-accordionTrigger is-collapsed">
+                                How can I get more involved?
+                            </a></div>
+                        <div class="accordion-content accordionItem is-collapsed accordion__panel" id="accordion2">
+                            Email us at ico@rntx.io, and let us know how you'd like to help! We're excited for our community to expand and look forward to working with everyone as we build.
+                        </div>
+                    </div>
+                    <div class="question accordion">
+                        <div><a href="#accordion3"
+                                class="accordion-title accordionTitle js-accordionTrigger is-collapsed">
+                                Where can I go to get a better understanding of RntX?
+                            </a></div>
+                        <div class="accordion-content accordionItem is-collapsed accordion__panel" id="accordion3">
+                            Reading our whitepaper is the best way to really understand how RntX works and what problems it addresses.
+                            We've intentionally spent a lot of time writing a paper that is accessible and unintimidating with the hope of making our mission clear.<br>
+                            Once you're done reading, join our social channels and send us your questions!
+                        </div>
+                    </div>
+                    <div class="question accordion">
+                        <div><a href="#accordion3"
+                                class="accordion-title accordionTitle js-accordionTrigger is-collapsed">
+                                What role does the RNTX Token play?
+                            </a></div>
+                        <div class="accordion-content accordionItem is-collapsed accordion__panel" id="accordion3">
+                            The RNTX Token acts as the means of access to the protocol and network's utility layer. Tokens are used to transact with and utilize the core components, provide and access services, and incentivize positive renter-landlord behaviours and interactions.
+                        </div>
+                    </div>
+                </div>
+                <div class="contribute">
+                    HAVE QUESTIONS?
+                    ASK US ON TELEGRAM.
                 </div>
             </div>
         </div>

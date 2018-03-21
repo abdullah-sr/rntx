@@ -3,45 +3,565 @@ import 'normalize.css';
 import 'typeface-overpass';
 import 'typeface-overpass-mono';
 import 'animate.css';
+import '../css/decolines.css';
 import '../css/main.css';
 // js
 import Vivus from 'vivus';
 import $ from 'jquery';
 import 'fullpage.js';
+import fontawesome from '@fortawesome/fontawesome';
+import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
+import faMedium from '@fortawesome/fontawesome-free-brands/faMedium';
+import faTwitterSquare from '@fortawesome/fontawesome-free-brands/faTwitterSquare';
 import initBall from './ball_animation';
 
 
-$(document).ready(() => {
+fontawesome.library.add(faFacebookSquare, faMedium, faTwitterSquare);
 
+$(document).ready(() => {
+    require('./LineMaker');
+    const lineMakers = [
+        null, // no lines for first slide
+        new LineMaker({
+            parent: { element: document.getElementById('project-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('press-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '338px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '661px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('papers-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('core-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '-200px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '90px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '370px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '660px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('renterid-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('renteriq-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('renterscore-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('token-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('sale-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('team-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '338px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '662px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('advisors-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '338px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: '662px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '0',
+                    width: 1,
+                    height: '200vh',
+                    color: '#f2f2f2',
+                },
+            ]
+        }), new LineMaker({
+            parent: { element: document.getElementById('faqs-section') },
+            lines: [
+                {
+                    top: '-500px',
+                    left: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '335px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: '655px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+                {
+                    top: '-500px',
+                    left: 'auto',
+                    right: '15px',
+                    width: 1,
+                    height: '200vh',
+                    color: '#0b0b0b',
+                },
+            ]
+        }),];
     const myVivus = new Vivus('pathx');
     // start loading X animation
     myVivus.play(1, async () => {
         myVivus.reset();
-        const xtext = document.getElementById('xtext');
-        // show X text
-        xtext.classList.add('visible');
-        await sleep(1000);
-        $('#loading').fadeOut(700);
-        $('#fullpage').fullpage({
-            verticalCentered: false,
-            onLeave: animateNav,
+        $('#xtext').fadeIn(1000, () => {
+            // fade out of loading screen
+            $('#loading').fadeOut(700);
+            $('#fullpage').fullpage({
+                verticalCentered: false,
+                scrollingSpeed: 800,
+                onLeave: (index, nextIndex) => {
+                    animateNav();              
+                    if ((nextIndex - 1) == 0) {
+                      $('#title-container').animateCss('fadeInDown');
+                    }
+                    if ((nextIndex - 1) == 1) {
+                      $('#contentp').animateCss('fadeIn');
+                      $('#project-h2').animateCss('slideInRight');
+                      $('#project-reasons').animateCss('slideInUp');
+                    }
+                    if ((nextIndex - 1) == 2) {
+                      $('#press-section').animateCss('fadeIn');
+                      $('#press-h2').animateCss('slideInRight');
+                    }
+                    if ((nextIndex - 1) == 3) {
+                      $('#papers-section').animateCss('fadeIn');
+                      $('#papers-h2').animateCss('slideInRight');
+                      $('#paperlinks').animateCss('slideInUp');
+                    }
+                    if ((nextIndex - 1) == 4) {
+                      $('#core-section').animateCss('slideInUp');
+                    }
+                    if ((nextIndex - 1) == 5) {
+                      $('#renterid-h2').animateCss('slideInRight');
+                      $('#renterid-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 6) {
+                      $('#renteriq-h2').animateCss('slideInRight');
+                      $('#renteriq-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 7) {
+                      $('#rscore-h2').animateCss('slideInRight');
+                      $('#rscore-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 8) {
+                      $('#token-h2').animateCss('slideInRight');
+                      $('#token-flex').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 9) {
+                      $('#tokensale-h2').animateCss('slideInRight');
+                    }
+                    if ((nextIndex - 1) == 10) {
+                      $('#team-h2').animateCss('slideInRight');
+                      $('#flex-team').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 11) {
+                      $('#advisors-h2').animateCss('slideInRight');
+                      $('#flex-advisors').animateCss('fadeInUp');
+                    }
+                    if ((nextIndex - 1) == 12) {
+                      $('#flex-faq').animateCss('fadeInUp');
+                      $('#faq-h2').animateCss('slideInRight');
+                    }
+                    if (lineMakers[index - 1])
+                        lineMakers[index - 1].hideLines(index - 1);
+                    if (lineMakers[nextIndex - 1])
+                        lineMakers[nextIndex - 1].animateLinesIn(nextIndex - 1);
+                },
+            });
+            initBall();
+            animateNav();
         });
-        initBall();
-        animateNav();
     });
 
+    //uses classList, setAttribute, and querySelectorAll
+//if you want this to work in IE8/9 youll need to polyfill these
+    (function () {
+        var d = document,
+            accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+            setAria,
+            setAccordionAria,
+            switchAccordion,
+            touchSupported = ('ontouchstart' in window),
+            pointerSupported = ('pointerdown' in window);
 
+        var skipClickDelay = function (e) {
+            e.preventDefault();
+            e.target.click();
+        }
+
+        var setAriaAttr = function (el, ariaType, newProperty) {
+            el.setAttribute(ariaType, newProperty);
+        };
+        setAccordionAria = function (el1, el2, expanded) {
+            switch (expanded) {
+                case "true":
+                    setAriaAttr(el1, 'aria-expanded', 'true');
+                    setAriaAttr(el2, 'aria-hidden', 'false');
+                    break;
+                case "false":
+                    setAriaAttr(el1, 'aria-expanded', 'false');
+                    setAriaAttr(el2, 'aria-hidden', 'true');
+                    break;
+                default:
+                    break;
+            }
+        };
+//function
+        switchAccordion = function (e) {
+            console.log("triggered");
+            e.preventDefault();
+            var thisAnswer = e.target.parentNode.nextElementSibling;
+            var thisQuestion = e.target;
+            if (thisAnswer.classList.contains('is-collapsed')) {
+                setAccordionAria(thisQuestion, thisAnswer, 'true');
+            } else {
+                setAccordionAria(thisQuestion, thisAnswer, 'false');
+            }
+            thisQuestion.classList.toggle('is-collapsed');
+            thisQuestion.classList.toggle('is-expanded');
+            thisAnswer.classList.toggle('is-collapsed');
+            thisAnswer.classList.toggle('is-expanded');
+
+            thisAnswer.classList.toggle('animateIn');
+        };
+        for (var i = 0, len = accordionToggles.length; i < len; i++) {
+            if (touchSupported) {
+                accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+            }
+            if (pointerSupported) {
+                accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+            }
+            accordionToggles[i].addEventListener('click', switchAccordion, false);
+        }
+    })();
 });
 
 
 async function animateNav() {
     const animation = 'fadeInDown';
     // hide nav on section leave
-    const $menuItem = $('.menuitem').removeClass(`visible animated ${animation}`);
+    const $menuItem = $('.menuitem').removeClass(`animated ${animation}`);
     await sleep(500);
-    $menuItem.animateCss(animation, (ele) => {
-        ele.addClass('visible');
-    });
+    $menuItem.animateCss(animation, false);
 }
 
 
@@ -50,7 +570,7 @@ function sleep(ms) {
 }
 
 $.fn.extend({
-    animateCss(animationName, callback) {
+    animateCss(animationName, remove = true, callback) {
         const animationEnd = ((el) => {
             const animations = {
                 animation: 'animationend',
@@ -67,10 +587,14 @@ $.fn.extend({
         })(document.createElement('div'));
 
         this.addClass('animated ' + animationName).one(animationEnd, () => {
+            if (remove) {
+                $(this).removeClass('animated ' + animationName);
+            }
             if (typeof callback === 'function') callback(this);
-            $(this).removeClass('animated ' + animationName);
         });
 
         return this;
-    },
-});
+    }
+    ,
+})
+;

@@ -73,6 +73,7 @@ const config = {
         new CleanWebpackPlugin([BUILD_DIR]),
         new webpack.ProvidePlugin({
             THREE: `${APP_DIR}/js/three`,
+            anime: 'animejs',
         }),
         // new BundleAnalyzerPlugin(),
     ],

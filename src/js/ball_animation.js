@@ -39,7 +39,7 @@ function init() {
 
 function createTextAnimation() {
     var geometry = generateTextGeometry('X', {
-        size: 180,
+        size: 300,
         height: 12,
         font: 'droid sans',
         weight: 'bold',
