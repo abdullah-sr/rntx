@@ -20,10 +20,22 @@ fontawesome.library.add(faFacebookSquare, faMedium, faTwitterSquare);
 
 $(document).ready(() => {
     require('./LineMaker');
+    const projectSection = document.getElementById('project-section');
+    const pressSection = document.getElementById('press-section');
+    const papersSection = document.getElementById('papers-section')
+    const coreSection = document.getElementById('core-section')
+    const renteridSection = document.getElementById('renterid-section')
+    const renteriqSection = document.getElementById('renteriq-section')
+    const renterScoreSection = document.getElementById('renterscore-section')
+    const tokenSection = document.getElementById('token-section')
+    const saleSection = document.getElementById('sale-section')
+    const teamSection = document.getElementById('team-section')
+    const advisorsSection = document.getElementById('advisors-section')
+    const faqsSection = document.getElementById('faqs-section')
     const lineMakers = [
         null, // no lines for first slide
         new LineMaker({
-            parent: { element: document.getElementById('project-section') },
+            parent: { element: projectSection },
             lines: [
                 {
                     top: '-500px',
@@ -56,7 +68,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('press-section') },
+            parent: { element: pressSection },
             lines: [
                 {
                     top: '-500px',
@@ -89,7 +101,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('papers-section') },
+            parent: { element: papersSection },
             lines: [
                 {
                     top: '-500px',
@@ -122,7 +134,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('core-section') },
+            parent: { element: coreSection },
             lines: [
                 {
                     top: '-500px',
@@ -154,7 +166,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('renterid-section') },
+            parent: { element: renteridSection },
             lines: [
                 {
                     top: '-500px',
@@ -187,7 +199,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('renteriq-section') },
+            parent: { element: renteriqSection },
             lines: [
                 {
                     top: '-500px',
@@ -220,7 +232,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('renterscore-section') },
+            parent: { element: renterScoreSection },
             lines: [
                 {
                     top: '-500px',
@@ -253,7 +265,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('token-section') },
+            parent: { element: tokenSection },
             lines: [
                 {
                     top: '-500px',
@@ -286,7 +298,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('sale-section') },
+            parent: { element: saleSection },
             lines: [
                 {
                     top: '-500px',
@@ -319,7 +331,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('team-section') },
+            parent: { element: teamSection },
             lines: [
                 {
                     top: '-500px',
@@ -352,7 +364,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('advisors-section') },
+            parent: { element: advisorsSection },
             lines: [
                 {
                     top: '-500px',
@@ -385,7 +397,7 @@ $(document).ready(() => {
                 },
             ]
         }), new LineMaker({
-            parent: { element: document.getElementById('faqs-section') },
+            parent: { element: faqsSection },
             lines: [
                 {
                     top: '-500px',
@@ -417,6 +429,31 @@ $(document).ready(() => {
                 },
             ]
         }),];
+    const $titleContainer = $('#title-container');
+    const $contentp = $('#contentp');
+    const $projectH2 = $('#project-h2');
+    const $projectReasons = $('#project-reasons');
+    const $pressSection = $('#press-section');
+    const $pressH2 = $('#press-h2');
+    const $projectSection = $('#papers-section');
+    const $papersH2 = $('#papers-h2');
+    const $paperLinks = $('#paperlinks');
+    const $coreSection = $('#core-section');
+    const $renterIdH2 = $('#renterid-h2');
+    const $renterIdFlex = $('#renterid-flex');
+    const $renterIqH2 = $('#renteriq-h2');
+    const $renterIqFlex = $('#renteriq-flex');
+    const $rScoreH2 = $('#rscore-h2');
+    const $rScoreFlex = $('#rscore-flex');
+    const $tokenH2 = $('#token-h2');
+    const $tokenFlex = $('#token-flex');
+    const $tokenSaleH2 = $('#tokensale-h2');
+    const $teamH2 = $('#team-h2');
+    const $flexTeam = $('#flex-team');
+    const $advisorsH2 = $('#advisors-h2');
+    const $flexAdvisors = $('#flex-advisors');
+    const $flexFaq = $('#flex-faq');
+    const $faqH2 = $('#faq-h2');
     const myVivus = new Vivus('pathx');
     // start loading X animation
     myVivus.play(1, async () => {
@@ -430,68 +467,77 @@ $(document).ready(() => {
                 loopBottom: false,
                 loopTop: false,
                 onLeave: (index, nextIndex) => {
-                    animateNav();              
-                    if ((nextIndex - 1) == 0) {
-                      $('#title-container').animateCss('fadeInDown');
+                    animateNav();
+                    const currentSlideIdx = nextIndex - 1;
+                    if (currentSlideIdx == 0) {
+                        $titleContainer.animateCss('fadeInDown');
                     }
-                    if ((nextIndex - 1) == 1) {
-                      $('#contentp').animateCss('fadeIn');
-                      $('#project-h2').animateCss('slideInRight');
-                      $('#project-reasons').animateCss('slideInUp');
+                    if (currentSlideIdx == 1) {
+                        $contentp.animateCss('fadeIn');
+                        $projectH2.animateCss('slideInRight');
+                        $projectReasons.animateCss('slideInUp');
                     }
-                    if ((nextIndex - 1) == 2) {
-                      $('#press-section').animateCss('fadeIn');
-                      $('#press-h2').animateCss('slideInRight');
+                    if (currentSlideIdx == 2) {
+                        $pressSection.animateCss('fadeIn');
+                        $pressH2.animateCss('slideInRight');
                     }
-                    if ((nextIndex - 1) == 3) {
-                      $('#papers-section').animateCss('fadeIn');
-                      $('#papers-h2').animateCss('slideInRight');
-                      $('#paperlinks').animateCss('slideInUp');
+                    if (currentSlideIdx == 3) {
+                        $projectSection.animateCss('fadeIn');
+                        $papersH2.animateCss('slideInRight');
+                        $paperLinks.animateCss('slideInUp');
                     }
-                    if ((nextIndex - 1) == 4) {
-                      $('#core-section').animateCss('slideInUp');
+                    if (currentSlideIdx == 4) {
+                        $coreSection.animateCss('slideInUp');
                     }
-                    if ((nextIndex - 1) == 5) {
-                      $('#renterid-h2').animateCss('slideInRight');
-                      $('#renterid-flex').animateCss('fadeInUp');
+                    if (currentSlideIdx == 5) {
+                        $renterIdH2.animateCss('slideInRight');
+                        $renterIdFlex.animateCss('fadeInUp');
                     }
-                    if ((nextIndex - 1) == 6) {
-                      $('#renteriq-h2').animateCss('slideInRight');
-                      $('#renteriq-flex').animateCss('fadeInUp');
+                    if (currentSlideIdx == 6) {
+                        $renterIqH2.animateCss('slideInRight');
+                        $renterIqFlex.animateCss('fadeInUp');
                     }
-                    if ((nextIndex - 1) == 7) {
-                      $('#rscore-h2').animateCss('slideInRight');
-                      $('#rscore-flex').animateCss('fadeInUp');
+                    if (currentSlideIdx == 7) {
+                        $rScoreH2.animateCss('slideInRight');
+                        $rScoreFlex.animateCss('fadeInUp');
                     }
-                    if ((nextIndex - 1) == 8) {
-                      $('#token-h2').animateCss('slideInRight');
-                      $('#token-flex').animateCss('fadeInUp');
+                    if (currentSlideIdx == 8) {
+                        $tokenH2.animateCss('slideInRight');
+                        $tokenFlex.animateCss('fadeInUp');
                     }
-                    if ((nextIndex - 1) == 9) {
-                      $('#tokensale-h2').animateCss('slideInRight');
+                    if (currentSlideIdx == 9) {
+                        $tokenSaleH2.animateCss('slideInRight');
                     }
-                    if ((nextIndex - 1) == 10) {
-                      $('#team-h2').animateCss('slideInRight');
-                      $('#flex-team').animateCss('fadeInUp');
+                    if (currentSlideIdx == 10) {
+                        $teamH2.animateCss('slideInRight');
+                        $flexTeam.animateCss('fadeInUp');
                     }
-                    if ((nextIndex - 1) == 11) {
-                      $('#advisors-h2').animateCss('slideInRight');
-                      $('#flex-advisors').animateCss('fadeInUp');
+                    if (currentSlideIdx == 11) {
+                        $advisorsH2.animateCss('slideInRight');
+                        $flexAdvisors.animateCss('fadeInUp');
                     }
-                    if ((nextIndex - 1) == 12) {
-                      $('#flex-faq').animateCss('fadeInUp');
-                      $('#faq-h2').animateCss('slideInRight');
+                    if (currentSlideIdx == 12) {
+                        $flexFaq.animateCss('fadeInUp');
+                        $faqH2.animateCss('slideInRight');
                     }
                     if (lineMakers[index - 1])
                         lineMakers[index - 1].hideLines(index - 1);
-                    if (lineMakers[nextIndex - 1])
-                        lineMakers[nextIndex - 1].animateLinesIn(nextIndex - 1);
+                    if (lineMakers[currentSlideIdx])
+                        lineMakers[currentSlideIdx].animateLinesIn(currentSlideIdx);
                 },
             });
             initBall();
             animateNav();
         });
     });
+    const $menuItem = $('.menuitem');
+    async function animateNav() {
+        const animation = 'fadeInDown';
+        // hide nav on section leave
+        $menuItem.removeClass(`animated ${animation}`);
+        await sleep(500);
+        $menuItem.animateCss(animation, false);
+    }
 
     //uses classList, setAttribute, and querySelectorAll
 //if you want this to work in IE8/9 youll need to polyfill these
@@ -557,15 +603,6 @@ $(document).ready(() => {
 });
 
 
-async function animateNav() {
-    const animation = 'fadeInDown';
-    // hide nav on section leave
-    const $menuItem = $('.menuitem').removeClass(`animated ${animation}`);
-    await sleep(500);
-    $menuItem.animateCss(animation, false);
-}
-
-
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -597,5 +634,4 @@ $.fn.extend({
         return this;
     }
     ,
-})
-;
+});
