@@ -396,22 +396,21 @@ $(document).ready(() => {
                 },
                 {
                     top: '-500px',
-                    left: '335px',
+                    left: '307px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: '655px',
+                    left: '601px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
                 },
                 {
                     top: '-500px',
-                    left: 'auto',
-                    right: '15px',
+                    left: '892px',
                     width: 1,
                     height: '200vh',
                     color: '#0b0b0b',
@@ -427,7 +426,9 @@ $(document).ready(() => {
             $('#loading').fadeOut(700);
             $('#fullpage').fullpage({
                 verticalCentered: false,
-                scrollingSpeed: 800,
+                scrollingSpeed: 880,
+                loopBottom: false,
+                loopTop: false,
                 onLeave: (index, nextIndex) => {
                     animateNav();              
                     if ((nextIndex - 1) == 0) {
