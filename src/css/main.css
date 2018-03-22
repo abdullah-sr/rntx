@@ -183,8 +183,8 @@ h1 {
 
 .whitelistcontainer {
     position: absolute;
-    left: 50px;
-    bottom: 50px;
+    left: 30px;
+    bottom: 30px;
 }
 
 .whitelistcontainer:hover .whitelist {
@@ -202,8 +202,8 @@ h1 {
     padding: 4px 10px 4px 10px;
     cursor: pointer;
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 30px;
+    right: 30px;
 }
 
 .section .telegram:hover {
@@ -690,7 +690,7 @@ a {
 
 .home-section .title-container {
     max-width: 350px;
-    margin: 0 0 0 auto;
+    margin: 0 auto;
 }
 
 .home-section .title-container .content {
@@ -1138,14 +1138,14 @@ a {
 
 .social a {
     display: block;
-    margin: 20px 35px 20px 20px;
+    margin: 20px;
     color: #fff;
     background-color: #000;
     transition: background 0.3s ease;
 }
 
 .social a svg {
-    height: 30px;
+    height: 1.75rem;
     width: auto !important;
     margin-top: -5px;
     margin-bottom: -5px;
@@ -1170,13 +1170,30 @@ a {
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     html, body {
         font-size: 14px;
     }
 
+    .nav {
+        top: 20px;
+    }
     .section {
-        padding-top: 70px;
+        padding-top: 50px;
+    }
+
+    .telegram{
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whitelistcontainer{
+        left: 15px;
+        bottom: 15px;
+    }
+
+    .social a{
+        margin: 15px;
     }
 }
 

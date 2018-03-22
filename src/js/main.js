@@ -456,7 +456,7 @@ $(document).ready(() => {
     const $faqH2 = $('#faq-h2');
     const myVivus = new Vivus('pathx');
     // start loading X animation
-    myVivus.play(1, async () => {
+    myVivus.play(100, async () => {
         myVivus.reset();
         $('#xtext').fadeIn(1000, () => {
             // fade out of loading screen
