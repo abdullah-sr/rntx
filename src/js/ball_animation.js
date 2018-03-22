@@ -39,7 +39,7 @@ function init() {
 
 function createTextAnimation() {
     var geometry = generateTextGeometry('X', {
-        size: 300,
+        size: 200,
         height: 12,
         font: 'droid sans',
         weight: 'bold',
@@ -219,7 +219,7 @@ function THREERoot(params) {
 
     this.camera = new THREE.PerspectiveCamera(
         params.fov,
-        (window.innerWidth/2) / (window.innerHeight/2),
+        (window.innerWidth / 2) / (window.innerHeight / 2),
         params.zNear,
         params.zfar
     );
@@ -252,10 +252,18 @@ THREERoot.prototype = {
         this.renderer.render(this.scene, this.camera);
     },
     resize: function () {
-        this.camera.aspect = window.innerWidth / window.innerHeight;
+        let width, height;
+        if (window.innerWidth < 768) {
+            width = window.innerWidth;
+            height = window.innerHeight / 2;
+        } else {
+            width = window.innerWidth / 2;
+            height = window.innerHeight/1.2;
+        }
+        this.camera.aspect = width / height;
         this.camera.updateProjectionMatrix();
 
-        this.renderer.setSize(window.innerWidth/1.75, window.innerHeight/1.75); // canvas size
+        this.renderer.setSize(width, height); // canvas size
     }
 };
 
