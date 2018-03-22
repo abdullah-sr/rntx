@@ -231,11 +231,11 @@ h2 {
 h3 {
     font-family: Overpass, sans-serif;
     position: absolute;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 7.5rem;
     color: #F7F7F7;
     letter-spacing: 0.8px;
-    z-index: 0;
+    z-index: -1;
 }
 
 h4 {
@@ -724,7 +724,14 @@ a {
 }
 
 .project-section .content {
+    display: flex;
+    flex-direction: column;
     z-index: 10;
+}
+
+.project-section .content h3{
+    margin: 180px 0;
+    align-self: center;
 }
 
 .project-section h5 {
@@ -759,11 +766,19 @@ a {
 }
 
 .press-section .content {
+    display: flex;
+    flex-direction: column;
     z-index: 10;
 }
 
 .press-section h2 {
-    margin-bottom: 100px;
+     margin-bottom: 100px;
+ }
+
+.press-section h3 {
+    align-self: center;
+    margin: 160px 0;
+    font-size: 3rem;
 }
 
 .press-section .grid-item {
@@ -970,6 +985,12 @@ a {
     margin-bottom: 100px;
 }
 
+.sale-section h3 {
+    align-self: center;
+    font-size: 5rem;
+    margin: 115px 0;
+}
+
 .sale-section .content {
     display: flex;
     flex-direction: column;
@@ -1019,6 +1040,11 @@ a {
     display: flex;
     flex-direction: column;
     z-index: 10;
+}
+
+.team-section .content h3{
+    font-size: 5rem;
+    margin: 115px;
 }
 
 .team-section .description {
