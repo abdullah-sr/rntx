@@ -667,7 +667,7 @@ a {
     right: 10px;
     font-size: 13px;
     letter-spacing: 1.1px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .nav > a {
@@ -845,6 +845,7 @@ a {
     max-width: 290px;
     margin-bottom: 40px;
     margin-right: 60px;
+    min-height: 130px;
 }
 
 .papers-section .paper .title {
@@ -939,9 +940,10 @@ a {
 }
 
 .component-section .item {
-    margin-right: 31px;
+    margin-right: 59px;
     margin-bottom: 30px;
     min-width: 255px;
+    flex: 1;
 }
 
 .component-section .item img,
@@ -950,9 +952,6 @@ a {
     max-width: 300px;
 }
 
-.component-section .item:last-child {
-    margin-right: 0;
-}
 
 .component-section .list {
     display: flex;
@@ -1313,6 +1312,15 @@ a {
 
     .faqs-section .question {
         height: 110px;
+    }
+}
+
+@media (max-width: 972px) {
+    .component-section .table-space-around{
+        justify-content: space-around;
+    }
+    .component-section .table-space-around .item{
+        flex: 0;
     }
 }
 
