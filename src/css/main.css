@@ -609,6 +609,10 @@ a {
     width: 100%;
 }
 
+.hide-sm{
+    display: inline-block !important;
+}
+
 .flex-rw.center {
     justify-content: center;
 }
@@ -922,7 +926,6 @@ a {
     font-size: 59px;
     max-width: 350px;
     letter-spacing: 1px;
-    margin-left: 20px;
     z-index: 2;
 }
 
@@ -1077,7 +1080,7 @@ a {
 
 .team-section .member img {
     margin-bottom: 15px;
-    max-width: 140px;
+    max-width: 130px;
 }
 
 .faqs-section {
@@ -1225,7 +1228,7 @@ a {
 
     .project-section .numbers {
         transform: none;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         padding-left: 10px;
     }
 
@@ -1241,20 +1244,20 @@ a {
         margin-right: 15px;
     }
 
-    .flex-rw {
-        justify-content: space-around;
-    }
-
     .component-section {
         margin: -50px auto 0 auto;
     }
 
-    .component-section .item img, .component-section .item svg{
+    .component-section .item img, .component-section .item svg {
         max-width: 200px;
     }
 
     .sale-section .timeline {
         margin-right: 95px;
+    }
+
+    .table-space-around{
+        justify-content: space-around;
     }
 }
 
@@ -1262,28 +1265,71 @@ a {
     html, body {
         font-size: 12px;
     }
-}
 
-@media (max-width: 380px) {
-    .nav > a {
-        margin-right: 10px;
+    .hide-sm {
+        display: none !important;
     }
-}
 
-@media (max-width: 600px) {
-    .press-section h2 {
-        margin-bottom: 40px;
+    .nav {
+        right: 0;
+        left: 0;
+        justify-content: space-around;
+    }
+
+    .nav > a {
+        margin-right: 0;
+    }
+
+    .papers-section .paper {
+        margin-bottom: 35px;
+    }
+
+    .papers-section .paper .title {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .papers-section .paper .descriptions {
+        font-size: 0.9rem;
+    }
+
+    .papers-section .contribute, .faqs-section .contribute {
+        font-size: 1.15rem;
     }
 
     .press-section .grid-item {
-        height: 100px;
         width: 100px;
+        height: 100px;
     }
 
-    .project-section .reason {
-        margin-bottom: 15px;
+    .team-section .member img {
+        max-width: 100px;
+    }
+
+    .faqs-section h4{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .faqs-section .question {
+        height: 110px;
     }
 }
+
+/*@media (max-width: 600px) {*/
+/*.press-section h2 {*/
+/*margin-bottom: 40px;*/
+/*}*/
+
+/*.press-section .grid-item {*/
+/*height: 100px;*/
+/*width: 100px;*/
+/*}*/
+
+/*.project-section .reason {*/
+/*margin-bottom: 15px;*/
+/*}*/
+/*}*/
 
 /*********************************/
 
@@ -1367,6 +1413,7 @@ a {
     font-weight: 400;
     font-size: 12px;
     height: auto;
+    max-height: 180px;
     overflow: hidden;
     /*max-height: 30px;*/
     -webkit-transition: max-height 1s;
