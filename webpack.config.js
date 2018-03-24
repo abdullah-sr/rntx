@@ -36,7 +36,7 @@ const config = {
                 }),
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
@@ -46,7 +46,7 @@ const config = {
 
             },
             {
-                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                test: /\.(woff|woff2|eot|ttf)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
