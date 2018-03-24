@@ -287,7 +287,7 @@ h6 {
     font-weight: 800;
     font-size: 18px;
     letter-spacing: 1.33px;
-    margin: 100px auto 20px;
+    margin: 0 auto;
     text-align: center;
     max-width: 400px;
 }
@@ -609,8 +609,12 @@ a {
     width: 100%;
 }
 
-.hide-sm{
+.hide-sm {
     display: inline-block !important;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .flex-rw.center {
@@ -744,7 +748,7 @@ a {
 }
 
 .project-section h5 {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 
 .project-section .reason {
@@ -756,7 +760,7 @@ a {
 }
 
 .project-section .numbers {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .project-section h2 {
@@ -941,9 +945,10 @@ a {
 
 .component-section .item {
     margin-right: 59px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     min-width: 255px;
     flex: 1;
+    z-index: 20;
 }
 
 .component-section .item img,
@@ -951,7 +956,6 @@ a {
     width: 100%;
     max-width: 300px;
 }
-
 
 .component-section .list {
     display: flex;
@@ -972,7 +976,7 @@ a {
 .component-section .list .usecases {
     font-family: Overpass Mono, sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.9rem;
     letter-spacing: 0.7px;
 }
 
@@ -1100,10 +1104,14 @@ a {
 
 .faqs-section .question {
     flex: 1;
-    margin-right: 20px;
-    height: 200px;
+    margin-right: 35px;
     min-width: 250px;
-    max-width: 300px;
+    max-width: 260px;
+    margin-bottom: 20px;
+}
+
+.faqs-section .flex-rw {
+    min-height: 280px;
 }
 
 .line {
@@ -1167,16 +1175,14 @@ a {
     font-family: Overpass, sans-serif;
     font-weight: 800;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 20px;
+    left: 20px;
     font-size: 2.5rem;
     cursor: pointer;
 }
 
-/* MOBILE */
-
-/* TABLET */
-@media (max-width: 768px) {
+/* Laptop */
+@media (max-width: 1024px) {
     html, body {
         font-size: 13px;
     }
@@ -1184,6 +1190,15 @@ a {
     .nav {
         top: 20px;
     }
+
+    h1, h2, h3, h4, h5 {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
 
     .section {
         padding-top: 50px;
@@ -1199,6 +1214,14 @@ a {
         bottom: 15px;
     }
 
+    .floattext {
+        height: 16px;
+    }
+
+    .floattext span {
+        line-height: inherit;
+    }
+
     .social a {
         margin: 15px;
     }
@@ -1211,18 +1234,23 @@ a {
     h1, h2, h3, h4, h5 {
         margin-top: 15px !important;
         margin-bottom: 15px !important;
+        line-height: inherit;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.5rem !important;
     }
 
     h3 {
-        font-size: 5rem;
+        font-size: 5rem !important;
     }
 
     .project-section h5 {
         margin-bottom: 30px !important;
+    }
+
+    .project-section .reason {
+        margin-bottom: 30px;
     }
 
     .project-section .numbers {
@@ -1232,15 +1260,16 @@ a {
     }
 
     .press-section {
-        margin: -35px auto 0 auto;
+        margin: -80px auto 0 auto;
     }
 
     .papers-section .contribute {
-        margin: 0 auto;
+        margin-top: 20px;
     }
 
     .component-section .item {
         margin-right: 15px;
+        margin-bottom: 30px;
     }
 
     .component-section {
@@ -1249,17 +1278,30 @@ a {
 
     .component-section .item img, .component-section .item svg {
         max-width: 200px;
+        max-height: 200px;
+        width: auto;
+        height: auto;
     }
 
     .sale-section .timeline {
         margin-right: 95px;
     }
 
-    .table-space-around{
+    .table-space-around {
         justify-content: space-around;
+    }
+
+    .press-section .grid-item {
+        width: 130px;
+        height: 130px;
+    }
+
+    .papers-section .paper {
+        margin-bottom: 20px;
     }
 }
 
+/* MOBILE */
 @media (max-width: 425px) {
     html, body {
         font-size: 12px;
@@ -1279,8 +1321,13 @@ a {
         margin-right: 0;
     }
 
+    .project-section .reason {
+        margin-bottom: 20px;
+    }
+
     .papers-section .paper {
-        margin-bottom: 35px;
+        min-height: 110px;
+        margin-bottom: 10px;
     }
 
     .papers-section .paper .title {
@@ -1305,39 +1352,47 @@ a {
         max-width: 100px;
     }
 
-    .faqs-section h4{
+    .faqs-section h4 {
         margin-top: 0;
         margin-bottom: 0;
     }
 
     .faqs-section .question {
-        height: 110px;
+        /*height: 110px;*/
+    }
+
+    .component-section .item {
+        margin-bottom: 15px;
     }
 }
 
 @media (max-width: 972px) {
-    .component-section .table-space-around{
+    .component-section .table-space-around {
         justify-content: space-around;
     }
-    .component-section .table-space-around .item{
+
+    .component-section .table-space-around .item {
         flex: 0;
     }
 }
 
-/*@media (max-width: 600px) {*/
-/*.press-section h2 {*/
-/*margin-bottom: 40px;*/
-/*}*/
+/* Faqs */
+@media (max-width: 1170px) {
+    .faqs-section .flex-rw {
+        min-height: 380px;
+    }
+}
 
-/*.press-section .grid-item {*/
-/*height: 100px;*/
-/*width: 100px;*/
-/*}*/
+@media (max-width: 600px) {
 
-/*.project-section .reason {*/
-/*margin-bottom: 15px;*/
-/*}*/
-/*}*/
+    .faqs-section .question {
+        margin-bottom: 30px;
+    }
+
+    .faqs-section .flex-rw {
+        min-height: 520px;
+    }
+}
 
 /*********************************/
 
@@ -1387,6 +1442,7 @@ a {
     -webkit-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
     /*border-bottom: 1px solid #30bb64;*/
+    margin-bottom: 5px;
 }
 
 .accordionTitle:before,
@@ -1421,7 +1477,7 @@ a {
     font-weight: 400;
     font-size: 12px;
     height: auto;
-    max-height: 180px;
+    max-height: 200px;
     overflow: hidden;
     /*max-height: 30px;*/
     -webkit-transition: max-height 1s;

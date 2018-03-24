@@ -456,7 +456,7 @@ $(document).ready(() => {
     const $faqH2 = $('#faq-h2');
     const myVivus = new Vivus('pathx');
     // start loading X animation
-    myVivus.play(1, async () => {
+    myVivus.play(100, async () => {
         myVivus.reset();
         $('#xtext').fadeIn(1000, () => {
             // fade out of loading screen
@@ -531,6 +531,7 @@ $(document).ready(() => {
         });
     });
     const $menuItem = $('.menuitem');
+
     async function animateNav() {
         const animation = 'fadeInDown';
         // hide nav on section leave
@@ -539,12 +540,9 @@ $(document).ready(() => {
         $menuItem.animateCss(animation, false);
     }
 
-    //uses classList, setAttribute, and querySelectorAll
-//if you want this to work in IE8/9 youll need to polyfill these
     (function () {
         var d = document,
             accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
-            setAria,
             setAccordionAria,
             switchAccordion,
             touchSupported = ('ontouchstart' in window),
@@ -572,12 +570,16 @@ $(document).ready(() => {
                     break;
             }
         };
-//function
         switchAccordion = function (e) {
-            console.log("triggered");
             e.preventDefault();
             var thisAnswer = e.target.parentNode.nextElementSibling;
             var thisQuestion = e.target;
+            for (var i = 0, len = accordionToggles.length; i < len; i++) {
+                if (accordionToggles[i] == thisQuestion) continue;
+                if (accordionToggles[i].classList.contains('is-expanded')) {
+                    accordionToggles[i].click();
+                }
+            }
             if (thisAnswer.classList.contains('is-collapsed')) {
                 setAccordionAria(thisQuestion, thisAnswer, 'true');
             } else {
