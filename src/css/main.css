@@ -753,7 +753,7 @@ a {
 
 .project-section .reason {
     font-size: 0.9rem;
-    margin-right: 40px;
+    margin-right: 25px;
     margin-bottom: 40px;
     max-width: 280px;
     font-weight: 400;
@@ -962,7 +962,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.8px;
 }
@@ -976,7 +976,7 @@ a {
 .component-section .list .usecases {
     font-family: Overpass Mono, sans-serif;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 0.7px;
 }
 
@@ -1364,6 +1364,20 @@ a {
     .component-section .item {
         margin-bottom: 15px;
     }
+
+    h1, h2, h3, h4, h5 {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        line-height: inherit;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    h3 {
+        font-size: 4rem !important;
+    }
 }
 
 @media (max-width: 972px) {
@@ -1385,12 +1399,16 @@ a {
 
 @media (max-width: 600px) {
 
+    .faqs-section h4{
+        display: none;
+    }
+
     .faqs-section .question {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
     }
 
     .faqs-section .flex-rw {
-        min-height: 520px;
+        min-height: 400px;
     }
 }
 

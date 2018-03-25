@@ -19,6 +19,7 @@ import initBall from './ball_animation';
 fontawesome.library.add(faFacebookSquare, faMedium, faTwitterSquare);
 
 $(document).ready(() => {
+    mixpanel.track('LandingPage');
     require('./LineMaker');
     const projectSection = document.getElementById('project-section');
     const pressSection = document.getElementById('press-section');
