@@ -472,54 +472,90 @@ $(document).ready(() => {
                     const currentSlideIdx = nextIndex - 1;
                     if (currentSlideIdx == 0) {
                         $titleContainer.animateCss('fadeInDown');
-                    }
-                    if (currentSlideIdx == 1) {
+                    } else if (currentSlideIdx == 1) {
                         $contentp.animateCss('fadeIn');
                         $projectH2.animateCss('slideInRight');
                         $projectReasons.animateCss('slideInUp');
-                    }
-                    if (currentSlideIdx == 2) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Project' }
+                        );
+                    } else if (currentSlideIdx == 2) {
                         $pressSection.animateCss('fadeIn');
                         $pressH2.animateCss('slideInRight');
-                    }
-                    if (currentSlideIdx == 3) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Press' }
+                        );
+                    } else if (currentSlideIdx == 3) {
                         $projectSection.animateCss('fadeIn');
                         $papersH2.animateCss('slideInRight');
                         $paperLinks.animateCss('slideInUp');
-                    }
-                    if (currentSlideIdx == 4) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Papers' }
+                        );
+                    } else if (currentSlideIdx == 4) {
                         $coreSection.animateCss('slideInUp');
-                    }
-                    if (currentSlideIdx == 5) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Core' }
+                        );
+                    } else if (currentSlideIdx == 5) {
                         $renterIdH2.animateCss('slideInRight');
                         $renterIdFlex.animateCss('fadeInUp');
-                    }
-                    if (currentSlideIdx == 6) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'RenterID' }
+                        );
+                    } else if (currentSlideIdx == 6) {
                         $renterIqH2.animateCss('slideInRight');
                         $renterIqFlex.animateCss('fadeInUp');
-                    }
-                    if (currentSlideIdx == 7) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'RenterIQ' }
+                        );
+                    } else if (currentSlideIdx == 7) {
                         $rScoreH2.animateCss('slideInRight');
                         $rScoreFlex.animateCss('fadeInUp');
-                    }
-                    if (currentSlideIdx == 8) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'RenterScore' }
+                        );
+                    } else if (currentSlideIdx == 8) {
                         $tokenH2.animateCss('slideInRight');
                         $tokenFlex.animateCss('fadeInUp');
-                    }
-                    if (currentSlideIdx == 9) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'RNTX Token' }
+                        );
+                    } else if (currentSlideIdx == 9) {
                         $tokenSaleH2.animateCss('slideInRight');
-                    }
-                    if (currentSlideIdx == 10) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Token Sale' }
+                        );
+                    } else if (currentSlideIdx == 10) {
                         $teamH2.animateCss('slideInRight');
                         $flexTeam.animateCss('fadeInUp');
-                    }
-                    if (currentSlideIdx == 11) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Team' }
+                        );
+                    } else if (currentSlideIdx == 11) {
                         $advisorsH2.animateCss('slideInRight');
                         $flexAdvisors.animateCss('fadeInUp');
-                    }
-                    if (currentSlideIdx == 12) {
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Advisors' }
+                        );
+                    } else if (currentSlideIdx == 12) {
                         $flexFaq.animateCss('fadeInUp');
                         $faqH2.animateCss('slideInRight');
+                        mixpanel.track(
+                            'ScrollPage',
+                            { 'Page': 'Faq' }
+                        );
                     }
                     if (lineMakers[index - 1])
                         lineMakers[index - 1].hideLines(index - 1);
@@ -531,6 +567,15 @@ $(document).ready(() => {
             animateNav();
         });
     });
+
+    $('#join-tele-btn').click(() => {
+        mixpanel.track('JoinTelegram_Btn');
+    });
+
+    $('#join-whitelist-btn').click(() => {
+        mixpanel.track('JoinWhiteList_Btn');
+    });
+
     const $menuItem = $('.menuitem');
 
     async function animateNav() {
