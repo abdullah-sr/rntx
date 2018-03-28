@@ -3,3 +3,4 @@ node_modules
 dist/images/*
 dist/*.html
 /dist/index.html
+*.zip
