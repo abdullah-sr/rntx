@@ -632,12 +632,16 @@ a {
     background-color: #1a1a1a;
 }
 
-.section {
+.section, .slide {
     position: relative;
     background-color: #1a1a1a;
     color: #fff;
     padding-top: 80px;
     overflow: hidden;
+}
+
+.no-top-padding{
+    padding-top: 0 !important;
 }
 
 .section.inverted {
@@ -1149,6 +1153,10 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 10;
+}
+
+.slide .social{
+    display: none;
 }
 
 .social a {

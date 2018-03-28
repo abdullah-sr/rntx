@@ -3,6 +3,7 @@ import 'normalize.css';
 import 'typeface-overpass';
 import 'typeface-overpass-mono';
 import 'animate.css';
+import 'fullpage.js/dist/jquery.fullpage.css';
 import '../css/decolines.css';
 import '../css/main.css';
 // js
