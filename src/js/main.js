@@ -24,16 +24,16 @@ $(document).ready(() => {
     require('./LineMaker');
     const projectSection = document.getElementById('project-section');
     const pressSection = document.getElementById('press-section');
-    const papersSection = document.getElementById('papers-section')
-    const coreSection = document.getElementById('core-section')
-    const renteridSection = document.getElementById('renterid-section')
-    const renteriqSection = document.getElementById('renteriq-section')
-    const renterScoreSection = document.getElementById('renterscore-section')
-    const tokenSection = document.getElementById('token-section')
-    const saleSection = document.getElementById('sale-section')
-    const teamSection = document.getElementById('team-section')
-    const advisorsSection = document.getElementById('advisors-section')
-    const faqsSection = document.getElementById('faqs-section')
+    const papersSection = document.getElementById('papers-section');
+    const coreSection = document.getElementById('core-section');
+    const renteridSection = document.getElementById('renterid-section');
+    const renteriqSection = document.getElementById('renteriq-section');
+    const renterScoreSection = document.getElementById('renterscore-section');
+    const tokenSection = document.getElementById('token-section');
+    const saleSection = document.getElementById('sale-section');
+    const teamSection = document.getElementById('team-section');
+    const advisorsSection = document.getElementById('advisors-section');
+    const faqsSection = document.getElementById('faqs-section');
     const lineMakers = [
         null, // no lines for first slide
         new LineMaker({
