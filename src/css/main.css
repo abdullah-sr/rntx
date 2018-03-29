@@ -640,7 +640,7 @@ a {
     overflow: hidden;
 }
 
-.no-top-padding{
+.no-top-padding {
     padding-top: 0 !important;
 }
 
@@ -1155,7 +1155,7 @@ a {
     z-index: 10;
 }
 
-.section.horizontal .social{
+.section.horizontal .social {
     display: none;
 }
 
@@ -1203,7 +1203,8 @@ a {
 }
 
 /* Laptop */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: portrait),
+(max-height: 1024px) and (orientation: landscape) {
     html, body {
         font-size: 13px;
     }
@@ -1219,7 +1220,8 @@ a {
 }
 
 /* TABLET */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait),
+(max-height: 768px) and (orientation: landscape) {
 
     .section {
         padding-top: 50px;
@@ -1255,7 +1257,7 @@ a {
     h1, h2, h3, h4, h5 {
         margin-top: 15px !important;
         margin-bottom: 15px !important;
-        line-height: inherit;
+        line-height: 1.1;
     }
 
     h2 {
@@ -1267,7 +1269,7 @@ a {
     }
 
     .project-section h5 {
-        margin-bottom: 30px !important;
+        margin-bottom: 20px !important;
     }
 
     .project-section .reason {
@@ -1320,10 +1322,19 @@ a {
     .papers-section .paper {
         margin-bottom: 20px;
     }
+
+    .project-section {
+        margin: -60px auto 0 auto;
+    }
+
+    .project-section h4 {
+        display: none;
+    }
 }
 
 /* MOBILE */
-@media (max-width: 425px) {
+@media (max-width: 425px) and (orientation: portrait),
+(max-height: 425px) and (orientation: landscape) {
     html, body {
         font-size: 12px;
     }
@@ -1342,18 +1353,26 @@ a {
         margin-right: 0;
     }
 
+    .papers-section {
+        margin: -75px auto 0 auto;
+    }
+
     .project-section .reason {
         margin-bottom: 20px;
     }
 
+    .papers-section h4 {
+        display: none;
+    }
+
     .papers-section .paper {
-        min-height: 110px;
+        min-height: 80px;
         margin-bottom: 10px;
     }
 
     .papers-section .paper .title {
-        font-size: 1.5rem;
-        padding-bottom: 10px;
+        font-size: 1.3rem;
+        padding-bottom: 5px;
     }
 
     .papers-section .paper .descriptions {
@@ -1383,13 +1402,13 @@ a {
     }
 
     .component-section .item {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     h1, h2, h3, h4, h5 {
         margin-top: 10px !important;
         margin-bottom: 10px !important;
-        line-height: inherit;
+        line-height: 1;
     }
 
     h2 {
@@ -1420,7 +1439,7 @@ a {
 
 @media (max-width: 600px) {
 
-    .faqs-section h4{
+    .faqs-section h4 {
         display: none;
     }
 
