@@ -614,6 +614,10 @@ a {
     display: inline-block !important;
 }
 
+.hide-sm-block {
+    display: block !important;
+}
+
 .center-text {
     text-align: center;
 }
@@ -1086,7 +1090,7 @@ a {
     flex-basis: 100%;
 }
 
-.team-section .member{
+.team-section .member {
     margin-bottom: 10px;
 }
 
@@ -1246,9 +1250,8 @@ a {
     }
 
     /*.floattext span {*/
-        /*line-height: inherit;*/
+    /*line-height: inherit;*/
     /*}*/
-
     .social a {
         margin: 15px;
     }
@@ -1343,7 +1346,8 @@ a {
         font-size: 12px;
     }
 
-    .hide-sm {
+    .hide-sm,
+    .hide-sm-block {
         display: none !important;
     }
 
@@ -1441,7 +1445,7 @@ a {
         bottom: 8px;
     }
 
-    .section h4{
+    .section h4 {
         display: none;
     }
 
