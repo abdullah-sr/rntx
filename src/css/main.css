@@ -1211,8 +1211,7 @@ a {
 }
 
 /* Laptop */
-@media (max-width: 1024px) and (orientation: portrait),
-(max-height: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) {
     html, body {
         font-size: 13px;
     }
