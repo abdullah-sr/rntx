@@ -1086,6 +1086,12 @@ a {
     margin-bottom: 40px;
 }
 
+.team-section .member a{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
 .team-section .member.wrap {
     flex-basis: 100%;
 }
