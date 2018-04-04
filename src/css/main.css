@@ -1327,8 +1327,8 @@ a {
     }
 
     .press-section .grid-item {
-        width: 130px;
-        height: 130px;
+        /*width: 130px;*/
+        /*height: 130px;*/
     }
 
     .papers-section .paper {
