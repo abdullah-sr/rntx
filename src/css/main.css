@@ -1233,9 +1233,7 @@ a {
 }
 
 /* TABLET */
-@media (max-width: 768px) and (orientation: portrait),
-(max-height: 768px) and (orientation: landscape) {
-
+@media (max-width: 768px) {
     .section {
         padding-top: 50px;
     }
@@ -1327,8 +1325,8 @@ a {
     }
 
     .press-section .grid-item {
-        /*width: 130px;*/
-        /*height: 130px;*/
+        width: 130px;
+        height: 130px;
     }
 
     .papers-section .paper {
@@ -1345,8 +1343,7 @@ a {
 }
 
 /* MOBILE */
-@media (max-width: 425px) and (orientation: portrait),
-(max-height: 425px) and (orientation: landscape) {
+@media (max-width: 425px){
     html, body {
         font-size: 12px;
     }
